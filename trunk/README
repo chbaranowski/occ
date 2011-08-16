@@ -1,18 +1,32 @@
-# Setup Mars Robot Project
+Setup Mars Robot Project
+-------------------------
+
+0.) Install Oracle Java VM
+
+e.g. on Ubuntu Linux check that /usr/bin/java point to oracle Java VM.
 
 1.) Download Java 3D
-Download Java 3D API Version 1.4.0_01 from 
-http://java3d.java.net/binary-builds-old.html
+
+Download the Java 3D API Version 1.4.0_01 from http://java3d.java.net/binary-builds-old.html
 
 2.) Install Java 3D API into the JRE
 
-e.g. install Java 3D on Ubuntu Linux, change into the JRE directory with
-  cd /usr/lib/jvm/java-6-sun
-then run the Java 3D API install script
-  /home/osgi/Downloads/java3d-1_4_0_01-linux-i586.bin 
+e.g. install Java 3D on Ubuntu Linux, change into the JRE directory with cd /usr/lib/jvm/java-6-sun
+then run the Java 3D API install script /home/osgi/Downloads/java3d-1_4_0_01-linux-i586.bin 
 
 3.) Checkout the Mars Robot Project from SCM 
 
-svn checkout 
+svn checkout https://svn.codespot.com/a/eclipselabs.org/occ/trunk marsrobot
 
-  
+4.) Build the Mars Robot with Maven
+
+cd marsrobot
+mvn clean install
+
+5.) Run the Robot via PAX Runner
+
+mvn pax:run
+
+6.) Import the Project into Eclipse
+
+mvn eclipse:eclipse  
