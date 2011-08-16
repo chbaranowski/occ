@@ -1,0 +1,11 @@
+-include:   pom.xml
+-src:       src/main/java
+-classpath: target/classes
+Bundle-SymbolicName: ${pom.artifactId}
+Bundle-Version:      ${pom.version}
+Service-Component: org.eclipselabs.occ.marsrobot.world.internal.*
+Private-Package: org.eclipselabs.occ.marsrobot.world.internal,\
+	org.eclipselabs.occ.marsrobot.world.internal.contribs.maploader,\
+	org.eclipselabs.occ.marsrobot.world.internal.simbad.gui,\
+	org.eclipselabs.occ.marsrobot.world.internal.simbad.sim,\
+	org.eclipselabs.occ.marsrobot.world.internal.simbad.demo
