@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.eclipselabs.occ.marsrobot</groupId>
+	<artifactId>org.eclipselabs.occ.marsrobot.parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Marsrobot - Maven Parent Project</name>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.ops4j</groupId>
+				<artifactId>maven-pax-plugin</artifactId>
+				<version>1.5</version>
+				<configuration>
+					<framework>equinox</framework>
+					<provision>
+						<param>--vmOptions=-Dorg.osgi.service.http.port=8080 -Dorg.osgi.framework.system.packages.extra=com.sun.j3d.utils.geometry,javax.media.j3d,javax.vecmath</param>
+						<param>--definitionURL=file:platform-equinox-3.6.0.xml</param>
+					</provision>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.5</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<_include>bnd.bnd</_include>
+					</instructions>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<modules>
+		<module>org.eclipselabs.occ.marsrobot.world.api</module>
+		<module>org.eclipselabs.occ.marsrobot.world.simbad</module>
+		<module>org.eclipselabs.occ.marsrobot.environment.mars</module>
+		<module>org.eclipselabs.occ.marsrobot.robot.api</module>
+		<module>org.eclipselabs.occ.marsrobot.robot.marsrover</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>biz.aQute</groupId>
+				<artifactId>bndlib</artifactId>
+				<version>1.43.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipselabs.occ.marsrobot</groupId>
+				<artifactId>org.eclipselabs.occ.marsrobot.world.api</artifactId>
+				<version>${pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipselabs.occ.marsrobot</groupId>
+				<artifactId>org.eclipselabs.occ.marsrobot.robot.api</artifactId>
+				<version>${pom.version}</version>
+			</dependency>
+			
+		</dependencies>
+	</dependencyManagement>
+
+</project>

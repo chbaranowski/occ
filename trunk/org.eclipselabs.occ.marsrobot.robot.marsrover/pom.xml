@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>org.eclipselabs.occ.marsrobot.parent</artifactId>
+		<groupId>org.eclipselabs.occ.marsrobot</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>org.eclipselabs.occ.marsrobot.robot.marsrover</artifactId>
+	<name>Marsrobot - Robot Mars Rover Impl.</name>
+	<packaging>bundle</packaging>
+	
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.eclipselabs.occ.marsrobot</groupId>
+			<artifactId>org.eclipselabs.occ.marsrobot.world.api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipselabs.occ.marsrobot</groupId>
+			<artifactId>org.eclipselabs.occ.marsrobot.robot.api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>biz.aQute</groupId>
+			<artifactId>bndlib</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+	</dependencies>
+</project>
