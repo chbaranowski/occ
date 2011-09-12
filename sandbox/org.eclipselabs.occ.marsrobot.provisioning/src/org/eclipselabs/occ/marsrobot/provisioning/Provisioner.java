@@ -11,6 +11,7 @@ import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.metatype.Configurable;
+import aQute.bnd.annotation.metatype.Meta.AD;
 
 interface ProvisionerConfiguration {
 	String pickupFolder();
@@ -32,13 +33,13 @@ public class Provisioner implements BundleListener {
 	@Activate
 	public void start(BundleContext context, Map<String, Object> props) throws Exception {
 		configuration = Configurable.createConfigurable(ProvisionerConfiguration.class, props);
-		logger.logDebug("Start Provisioning Bundle");
 		this.bundleInstaller = new BundleInstaller(context);
 		this.watcher = new DirectoryWatcher(bundleInstaller);
 		this.watcher.setPickupFolder(configuration.pickupFolder());
 		thread = new Thread(watcher);
 		thread.start();
 		context.addBundleListener(this);
+		logger.logDebug("Start Provisioning Bundle");
 	}
 
 	@Deactivate

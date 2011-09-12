@@ -15,8 +15,6 @@ Service-Component: *
 	org.apache.felix.scr;version=1.4.0,\
 	org.apache.felix.shell;version=1.4.2,\
 	biz.aQute.bnd.annotation;version=1.44.0,\
-	org.eclipselabs.occ.simbad;version=snapshot,\
-	org.eclipselabs.occ.marsrobot.desktop;version=snapshot,\
 	org.apache.felix.eventadmin;version=1.2.14,\
 	org.apache.felix.gogo.runtime;version=0.10.0,\
 	org.apache.felix.gogo.command;version=0.10.0,\
