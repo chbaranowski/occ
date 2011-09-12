@@ -1,0 +1,5 @@
+Bundle-Version: 1.0.0
+Service-Component: *
+-buildpath: biz.aQute.bnd.annotation
+Private-Package: org.eclipselabs.occ.marsrobot.desktop.internal
+Export-Package: org.eclipselabs.occ.marsrobot.desktop

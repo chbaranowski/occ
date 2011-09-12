@@ -1,0 +1,8 @@
+Bundle-Version: 1.0.0
+Private-Package: org.eclipselabs.occ.marsrobot.sensordevices
+-buildpath: org.eclipselabs.occ.simbad;version=snapshot,\
+	biz.aQute.bnd.annotation,\
+	org.eclipselabs.occ.marsrobot.desktop;version=snapshot,\
+	osgi.cmpn,\
+	org.eclipselabs.occ.marsrobot.world;version=snapshot
+Service-Component: *
