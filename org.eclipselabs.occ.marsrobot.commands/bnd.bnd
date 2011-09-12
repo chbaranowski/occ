@@ -1,0 +1,6 @@
+Bundle-Version: 1.0.0
+Service-Component: *
+-buildpath: biz.aQute.bnd.annotation,\
+	org.apache.felix.gogo.runtime;version=0.10.0,\
+	org.eclipselabs.occ.marsrobot;version=snapshot
+Private-Package: org.eclipselabs.occ.marsrobot.commands

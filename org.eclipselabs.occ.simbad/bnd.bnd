@@ -1,0 +1,7 @@
+Export-Package: contribs.bench,\
+	contribs.maploader,\
+	contribs.robotlogtracer,\
+	simbad.demo,\
+	simbad.gui,\
+	simbad.sim
+Bundle-Version: 1.4

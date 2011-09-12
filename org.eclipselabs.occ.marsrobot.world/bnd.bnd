@@ -1,0 +1,7 @@
+Bundle-Version: 1.0.0
+-buildpath: biz.aQute.bnd.annotation;version=1.44.0,\
+	org.eclipselabs.occ.simbad;version=snapshot,\
+	osgi.cmpn;version=4.2.1,\
+	org.eclipselabs.occ.marsrobot;version=snapshot
+Private-Package: org.eclipselabs.occ.marsrobot.world.internal
+Service-Component: *
