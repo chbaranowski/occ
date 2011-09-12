@@ -1,4 +1,5 @@
--buildpath: osgi.core
+-buildpath: osgi.core,\
+	org.eclipselabs.occ.simbad;version=snapshot
 -runproperties: osgi.console=true
 -runfw: org.apache.felix.framework;version=3.0.4
 -runbundles: osgi.cmpn;version=4.2.1,\
@@ -24,8 +25,12 @@
 	org.eclipselabs.occ.marsrobot.sensordevices;version=snapshot,\
 	org.eclipselabs.occ.marsrobot.extender;version=snapshot,\
 	org.eclipselabs.occ.marsrobot.arch;version=snapshot,\
-	org.eclipselabs.occ.marsrobot.box;version=snapshot
+	org.eclipselabs.occ.marsrobot.box;version=snapshot,\
+	org.eclipselabs.occ.marsrobot.wall;version=snapshot
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
 	javax.vecmath; version=0.0.0
 Bundle-Version: 1.0.0
+Export-Package: org.eclipselabs.occ.marsrobot.desktop,\
+	org.eclipselabs.occ.marsrobot.world,\
+	org.eclipselabs.occ.marsrobot.robot

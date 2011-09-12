@@ -4,7 +4,4 @@ Export-Package: contribs.bench,\
 	simbad.demo,\
 	simbad.gui,\
 	simbad.sim
--runfw: org.eclipse.osgi;version=3.6.1
--runbundles: org.eclipselabs.occ.java3d;version=snapshot
--runproperties: osgi.console=true
 Bundle-Version: 1.4

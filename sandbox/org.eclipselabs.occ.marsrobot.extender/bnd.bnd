@@ -5,7 +5,7 @@ Export-Package: org.eclipselabs.occ.marsrobot.extender
 -buildpath: org.eclipselabs.occ.simbad;version=snapshot,\
 	osgi.core,\
 	osgi.cmpn,\
-	org.eclipselabs.occ.marsrobot.world;version=snapshot,\
-	biz.aQute.bnd.annotation
+	biz.aQute.bnd.annotation,\
+	org.eclipselabs.occ.marsrobot;version=snapshot
 Private-Package: org.eclipselabs.occ.marsrobot.extender.internal
 Service-Component: *
