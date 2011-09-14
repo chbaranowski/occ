@@ -3,17 +3,20 @@
 
  # Install Oracle Java VM
   e.g. on Ubuntu Linux check that `/usr/bin/java` point to Oracle Java VM.
+{{{
+ls -al /usr/bin/java
+java -version
+}}}
  # Download Java 3D
   Download the Java 3D API Version *1.4.0_01* from [http://java3d.java.net/binary-builds-old.html]. Note: the latest version of Java 3D API does *NOT* work
 {{{
 curl -o java3d-1_4_0_01-linux-i586.bin http://download.java.net/media/java3d/builds/release/1.4.0_01/java3d-1_4_0_01-linux-i586.bin
-. ./java3d-1_4_0_01-linux-i586.bin
 }}}
- # Install Java 3D API into the JRE
+ # Install Java 3D API into the JRE folder or Oracle JDK
   e.g. install Java 3D on Ubuntu Linux, change into the JRE directory and run the Java 3D API install script
 {{{
-cd /usr/lib/jvm/java-6-sun
-/home/osgi/Downloads/java3d-1_4_0_01-linux-i586.bin
+cd /usr/lib/jvm/java-6-sun/jre
+sh /path-to-download/java3d-1_4_0_01-linux-i586.bin
 }}}
  # Checkout the Mars Robot Project from SCM
 {{{
@@ -34,4 +37,5 @@ mvn eclipse:eclipse
 }}}
 
 == TODO ==
+ * really requires Orace JDK? Does OpenJDK 6 work too?
  * adapt doc to use of bndtool
