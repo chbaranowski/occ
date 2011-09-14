@@ -39,3 +39,4 @@ mvn eclipse:eclipse
 == TODO ==
  * really requires Orace JDK? Does OpenJDK 6 work too?
  * adapt doc to use of bndtool
+  # clean projects "org.eclipselabs.occ.simbad, org.eclipselabs.occ.robot, org.eclipselabs.occ.wall"
