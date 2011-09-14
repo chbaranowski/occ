@@ -6,8 +6,8 @@
  # Download Java 3D
   Download the Java 3D API Version *1.4.0_01* from [http://java3d.java.net/binary-builds-old.html]. Note: the latest version of Java 3D API does *NOT* work
 {{{
-curl http://download.java.net/media/java3d/builds/release/1.4.0_01/java3d-1_4_0_01-linux-i586.bin
-./java3d-1_4_0_01-linux-i586.bin
+curl -o java3d-1_4_0_01-linux-i586.bin http://download.java.net/media/java3d/builds/release/1.4.0_01/java3d-1_4_0_01-linux-i586.bin
+. ./java3d-1_4_0_01-linux-i586.bin
 }}}
  # Install Java 3D API into the JRE
   e.g. install Java 3D on Ubuntu Linux, change into the JRE directory and run the Java 3D API install script
