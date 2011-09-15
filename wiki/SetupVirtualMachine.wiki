@@ -17,5 +17,3 @@
   Goto System -> Preferences -> Network Proxy ->
  # Start Eclipse from Desktop
   Note: the SVN is yet included and linked to [http://svn.codespot.com/a/eclipselabs.org/occ/trunk]. The SVN user is `occparticipant@t-online.de`, the password will be given at OSGi Code Camp. The password is preset, and will be read from local secure store (use "osgi" as password to get access to store).
-
-== TODO ==
