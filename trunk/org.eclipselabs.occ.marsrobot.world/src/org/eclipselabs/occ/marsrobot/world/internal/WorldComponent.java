@@ -8,10 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -22,7 +20,6 @@ import org.eclipselabs.occ.marsrobot.world.World;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventAdmin;
 
-import simbad.gui.AgentFollower;
 import simbad.sim.Agent;
 import simbad.sim.BaseObject;
 import simbad.sim.EnvironmentDescription;
@@ -30,25 +27,15 @@ import simbad.sim.StaticObject;
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
-import aQute.bnd.annotation.component.Modified;
 import aQute.bnd.annotation.component.Reference;
-import aQute.bnd.annotation.metatype.Configurable;
-import aQute.bnd.annotation.metatype.Meta.OCD;
 
-@OCD(name = "World Configuration", description = "The World Configuration.")
-interface WorldConfiguration {
-	String name();
-}
-
-@Component(immediate = true, designate = WorldConfiguration.class)
+@Component(immediate = true)
 public class WorldComponent implements World, DesktopWindow {
 
 	EventAdmin eventAdmin;
 	
 	ApplicationWindow applicationWindow;
 	
-	WorldConfiguration configuration;
-
 	EnvironmentDescription simbadEnvironment;
 
 	simbad.sim.World simbadWorld;
@@ -59,7 +46,11 @@ public class WorldComponent implements World, DesktopWindow {
 	
 	Collection<Agent> agents = new ArrayList<Agent>();
 	
-	{
+	public WorldComponent() {
+		initialize();
+	}
+	
+	protected void initialize() {
 		worldPreviewControl = new JPanel();
 		JButton topViewButton = new JButton("top view");
 		topViewButton.addActionListener(new ActionListener() {
@@ -79,10 +70,9 @@ public class WorldComponent implements World, DesktopWindow {
 		});
 		worldPreviewControl.add(sideViewButton);
 	}
-	
+
 	@Activate
 	public void activate(Map<String, Object> props) {
-		configuration = Configurable.createConfigurable(WorldConfiguration.class, props);
 		simbadEnvironment = new EnvironmentDescription();
 		worldContent = new JPanel();
 		worldContent.setLayout(new BorderLayout());
@@ -106,11 +96,6 @@ public class WorldComponent implements World, DesktopWindow {
 		worldContent.remove(simbadWorld.getCanvas3D());
 		simbadWorld.dispose();
 		simbadWorld = null;
-	}
-
-	@Modified
-	public void modified(Map<String, Object> props) {
-		// TODO: Impl
 	}
 
 	@Override
@@ -172,7 +157,7 @@ public class WorldComponent implements World, DesktopWindow {
 
 	@Override
 	public String getName() {
-		return configuration.name() + " Preview";
+		return "Mars World";
 	}
 
 	@Override
