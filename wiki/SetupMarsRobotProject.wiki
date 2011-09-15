@@ -1,4 +1,4 @@
-#summary SetupMarsRobotProject
+#summary Setup Mars Robot Project
 = Setup Mars Robot Project =
 
  # Install Oracle Java VM
