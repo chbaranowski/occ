@@ -12,6 +12,8 @@
   * Use existing harddisk, boot from harddisk. Select your copied VirtualDisk file (e.g. OCC2011.vdi)
  # Start your Virtual Machine
   Note: the default user is named "osgi" with standard password "osgi".
+ # Customize your Virtual Machine if required
+  E.g. when running the VM within an company intranet, you have to specify an Network proxy in Linux. Goto System -> Preferences -> Network Proxy ->
  # Start Eclipse from Desktop
   Note: the SVN is yet included and linked to [http://svn.codespot.com/a/eclipselabs.org/occ/trunk]. The SVN user is "occparticipant@t-online.de", the password will be given at OSGi Code Camp. The password is preset, and will be read from local secure store (use "osgi" as password to get access to store).
 
