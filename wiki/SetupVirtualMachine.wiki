@@ -1,0 +1,12 @@
+#summary Setup Virtual Machine
+= Setup Virtual Machine =
+
+ # Install VirtualBox 
+  e.g. from [http://www.virtualbox.org/wiki/Downloads]. We use the latest version of VirtualBox 4.1.x.
+ # Copy the virtual disk
+  We provide a virtual disk (named OCC2011.vdi) as base to setup your own VM.
+ # Create your VM
+  * xx
+  * yyy
+
+== TODO ==
