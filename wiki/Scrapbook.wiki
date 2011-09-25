@@ -1,5 +1,4 @@
 #Scrapbook
-
 {{{
 # Get all downloads
 $ cd
@@ -31,5 +30,3 @@ URL: https://svn.codespot.com/a/eclipselabs.org/occ/
 # Special chars
 @
 }}}
-
-
