@@ -1,0 +1,12 @@
+<endpoint-descriptions xmlns="http://www.osgi.org/xmlns/rsa/v1.0.0">
+  <endpoint-description>
+    <property name="objectClass">
+      <array>
+        <value>org.eclipselabs.occ.marsrobot.robot.Robot</value>
+      </array>
+    </property>
+    <property name="endpoint.id">http://10.117.54.14:9090/ws/robot</property>
+    <property name="service.imported.configs">org.apache.cxf.ws</property>
+  </endpoint-description>
+</endpoint-descriptions>
+
