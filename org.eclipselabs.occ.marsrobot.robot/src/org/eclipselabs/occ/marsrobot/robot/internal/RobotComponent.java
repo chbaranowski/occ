@@ -43,7 +43,8 @@ interface RobotConfiguration {
 @Component(designateFactory = RobotConfiguration.class, immediate = true, 
 	properties = {
 		"service.exported.interfaces=*",
-		"service.exported.configs=org.apache.cxf.ws"
+		"service.exported.configs=org.apache.cxf.ws",
+		"org.apache.cxf.ws.address=http://10.117.54.14:9090/ws/robot"
 })
 public class RobotComponent implements Robot {
 
