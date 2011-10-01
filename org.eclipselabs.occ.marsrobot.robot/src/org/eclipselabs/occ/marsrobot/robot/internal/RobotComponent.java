@@ -40,7 +40,11 @@ interface RobotConfiguration {
 	Boolean sonarSensor();
 }
 
-@Component(designateFactory = RobotConfiguration.class, immediate = true)
+@Component(designateFactory = RobotConfiguration.class, immediate = true, 
+	properties = {
+		"service.exported.interfaces=*",
+		"service.exported.configs=org.apache.cxf.ws"
+})
 public class RobotComponent implements Robot {
 
 	RobotConfiguration configuration;
