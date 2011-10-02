@@ -16,15 +16,6 @@ import aQute.bnd.annotation.component.Reference;
 import aQute.bnd.annotation.metatype.Configurable;
 import aQute.bnd.annotation.metatype.Meta.OCD;
 
-@OCD(name="Wall", description="Wall Configuration.")
-interface WallConfiguration {
-	int x();
-	int y();
-	int z();
-	int length();
-	int height();
-	int rotate();
-}
 
 @Component(designateFactory=WallConfiguration.class, immediate=true)
 public class WallComponent {
