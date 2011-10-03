@@ -1,7 +1,6 @@
 -runproperties: osgi.console=true
 -runfw: org.apache.felix.framework;version=3.0.4
 -runbundles: osgi.cmpn;version=4.2.1,\
-	org.apache.felix.http.jetty;version=2.0.4,\
 	org.apache.felix.webconsole;version=3.1.8,\
 	org.apache.felix.configadmin;version=1.2.8,\
 	org.apache.felix.log;version=1.0.0,\
@@ -25,7 +24,10 @@
 	org.eclipselabs.occ.marsrobot.arch;version=snapshot,\
 	org.eclipselabs.occ.marsrobot.box;version=snapshot,\
 	org.eclipselabs.occ.marsrobot.wall;version=snapshot,\
-	org.eclipselabs.occ.marsrobot;version=snapshot
+	org.eclipselabs.occ.marsrobot;version=snapshot,\
+	cxf-dosgi-ri-singlebundle-distribution;version=1.2.0,\
+	org.eclipselabs.occ.marsrobot.remoteextender.service.cxf;version=snapshot,\
+	org.eclipselabs.occ.marsrobot.remoteextender.service.api;version=snapshot
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
 	javax.vecmath; version=0.0.0
