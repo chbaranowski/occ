@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="wallservice" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="WallServiceSoapBinding" type="wsdl" bindingName="{http://api.service.remoteextender.marsrobot.occ.eclipselabs.org/}WallServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:9090/wallservice?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:9090/wallservice?wsdl"><con:part><con:url>http://localhost:9090/wallservice?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WallService" targetNamespace="http://api.service.remoteextender.marsrobot.occ.eclipselabs.org/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://api.service.remoteextender.marsrobot.occ.eclipselabs.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://api.service.remoteextender.marsrobot.occ.eclipselabs.org/">
+      <xsd:element name="createWall" type="tns:createWall"/>
+      <xsd:complexType name="createWall">
+        <xsd:sequence>
+          <xsd:element name="arg0" type="xsd:int"/>
+          <xsd:element name="arg1" type="xsd:int"/>
+          <xsd:element name="arg2" type="xsd:int"/>
+          <xsd:element name="arg3" type="xsd:int"/>
+          <xsd:element name="arg4" type="xsd:int"/>
+          <xsd:element name="arg5" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="createWallResponse" type="tns:createWallResponse"/>
+      <xsd:complexType name="createWallResponse">
+        <xsd:sequence/>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="createWall">
+    <wsdl:part element="tns:createWall" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createWallResponse">
+    <wsdl:part element="tns:createWallResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WallServicePortType">
+    <wsdl:operation name="createWall">
+      <wsdl:input message="tns:createWall" name="createWall"></wsdl:input>
+      <wsdl:output message="tns:createWallResponse" name="createWallResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WallServiceSoapBinding" type="tns:WallServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createWall">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createWall">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createWallResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WallService">
+    <wsdl:port binding="tns:WallServiceSoapBinding" name="WallServicePort">
+      <soap:address location="http://localhost:9090/wallservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:9090/wallservice</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="createWall" bindingOperationName="createWall" type="Request-Response" outputName="createWallResponse" inputName="createWall" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/wallservice</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.service.remoteextender.marsrobot.occ.eclipselabs.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:createWall>
+         <api:arg0>1</api:arg0>
+         <api:arg1>2</api:arg1>
+         <api:arg2>1</api:arg2>
+         <api:arg3>2</api:arg3>
+         <api:arg4>3</api:arg4>
+         <api:arg5>1</api:arg5>
+      </api:createWall>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.service.remoteextender.marsrobot.occ.eclipselabs.org/WallServicePortType/createWall"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
