@@ -1,0 +1,7 @@
+-runfw: org.apache.felix.framework;version=3.0.4
+-runproperties: osgi.console=true
+-buildpath: osgi.core,\
+	biz.aQute.bnd,\
+	biz.aQute.bnd.annotation,\
+	osgi.cmpn
+Export-Package: org.eclipselabs.occ.marsrobot.remoteextender.service.api
