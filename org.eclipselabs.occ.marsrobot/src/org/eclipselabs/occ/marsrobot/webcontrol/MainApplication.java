@@ -95,6 +95,7 @@ public class MainApplication extends Application {
 		updateCommandTable();
 	}
 
+	@SuppressWarnings("serial")
 	private void updateCommandTable() {
 		for (String oneMethodName : commands.keySet()) {
 			final Method method = commands.get(oneMethodName);
@@ -157,7 +158,7 @@ public class MainApplication extends Application {
 	}
 
 	@Reference(multiple = true, optional = false, dynamic = true)
-	public void addRobotCommand(RobotCommand cmd, Map properties) {
+	public void addRobotCommand(RobotCommand cmd, Map<?,?> properties) {
 		String[] methodNames = (String[]) properties.get(CommandProcessor.COMMAND_FUNCTION);
 
 		Map<String, Method> methodsByName = new HashMap<String, Method>();
