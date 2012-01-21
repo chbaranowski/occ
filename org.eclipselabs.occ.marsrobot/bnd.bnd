@@ -1,6 +1,0 @@
--buildpath: osgi.core,\
-	org.eclipselabs.occ.simbad;version=snapshot
-Bundle-Version: 1.0.0
-Export-Package: org.eclipselabs.occ.marsrobot.desktop,\
-	org.eclipselabs.occ.marsrobot.world,\
-	org.eclipselabs.occ.marsrobot.robot

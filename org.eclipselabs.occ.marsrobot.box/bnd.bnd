@@ -1,5 +1,0 @@
--buildpath: org.eclipselabs.occ.simbad;version=snapshot,\
-	org.eclipselabs.occ.marsrobot.extender;version=snapshot
-Private-Package: org.eclipselabs.occ.marsrobot.box
-Bundle-Version: 1.0.0
-StaticObject-Class: org.eclipselabs.occ.marsrobot.box.BoxStaticObject
