@@ -29,7 +29,7 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 
 @Component(factory = "vaadin.app", name = "webcontrol")
-public class MainApplication extends Application {
+public class RobotWebControlApplication extends Application {
 
 	private static final long serialVersionUID = 1L;
 
