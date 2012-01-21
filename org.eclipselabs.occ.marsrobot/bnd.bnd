@@ -2,7 +2,8 @@
 	biz.aQute.bnd.annotation;version=1.51.1,\
 	osgi.cmpn;version=4.2.0.200908310645,\
 	osgi.core;version=4.3.0.201102171602,\
-	org.apache.felix.gogo.runtime;version=0.10.0
+	org.apache.felix.gogo.runtime;version=0.10.0,\
+	com.vaadin;version=6.7.4
 -sub: *.bnd
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
@@ -19,6 +20,9 @@
 	org.apache.felix.webconsole;version=3.1.8,\
 	org.apache.felix.gogo.command;version=0.12.0,\
 	org.apache.felix.gogo.runtime;version=0.10.0,\
-	org.apache.felix.gogo.shell;version=0.10.0
+	org.apache.felix.gogo.shell;version=0.10.0,\
+	org.vaadin.osgi;version=1.0.1,\
+	org.vaadin.osgi.staticres;version=1.0.1,\
+	com.vaadin;version=6.7.4
 -runee: JavaSE-1.6
 Bundle-Version: 1.0.0
