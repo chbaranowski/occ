@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
+
+<repository lastmodified='20120121182817.289' name='Release'>
+  <resource id='org.eclipselabs.occ.simbad/1.4.1' presentationname='org.eclipselabs.occ.simbad' symbolicname='org.eclipselabs.occ.simbad' uri='org.eclipselabs.occ.simbad/org.eclipselabs.occ.simbad-1.4.1.jar' version='1.4.1'>
+    <size>
+      275298
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.simbad'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.simbad'/>
+      <p n='version' t='version' v='1.4.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='contribs.bench'/>
+      <p n='uses' v='simbad.gui,simbad.sim,javax.vecmath'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='contribs.maploader'/>
+      <p n='uses' v='simbad.sim,javax.vecmath,simbad.gui'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='contribs.robotlogtracer'/>
+      <p n='uses' v='javax.imageio,javax.swing,simbad.sim,javax.vecmath,simbad.gui'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='simbad.demo'/>
+      <p n='uses' v='simbad.sim,javax.vecmath,javax.swing,javax.media.j3d'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='simbad.gui'/>
+      <p n='uses' v='simbad.sim,javax.swing.border,javax.swing,javax.swing.text,simbad.demo,javax.media.j3d,javax.vecmath'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='simbad.sim'/>
+      <p n='uses' v='simbad.gui,com.sun.j3d.utils.geometry,javax.swing,javax.vecmath,javax.media.j3d,javax.swing.event'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.sun.j3d.utils.geometry)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.sun.j3d.utils.geometry
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.imageio)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.imageio
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.media.j3d)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.media.j3d
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.border)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.border
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.event)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.event
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.text)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.text
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.vecmath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.vecmath
+    </require>
+  </resource>
+</repository>
