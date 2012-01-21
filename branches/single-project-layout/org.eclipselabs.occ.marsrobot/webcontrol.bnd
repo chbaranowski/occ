@@ -1,0 +1,2 @@
+Private-Package: org.eclipselabs.occ.marsrobot.webcontrol
+Service-Component: *
