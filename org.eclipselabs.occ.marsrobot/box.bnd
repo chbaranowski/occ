@@ -1,0 +1,2 @@
+Private-Package: org.eclipselabs.occ.marsrobot.box
+StaticObject-Class: org.eclipselabs.occ.marsrobot.box.BoxStaticObject
