@@ -1,0 +1,6 @@
+Private-Package: org.eclipselabs.occ.marsrobot.wall
+Bundle-Version: 1.0.0
+-buildpath: org.eclipselabs.occ.simbad;version=snapshot,\
+	biz.aQute.bnd.annotation,\
+	org.eclipselabs.occ.marsrobot;version=snapshot
+Service-Component: *
