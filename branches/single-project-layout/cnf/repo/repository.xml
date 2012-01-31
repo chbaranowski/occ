@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
-
-<repository lastmodified='20120121214603.139' name='Local Repository'>
+<repository lastmodified='20120131091918.730' name='Local Repository'>
   <resource id='biz.aQute.bnd/1.51.1' presentationname='bnd' symbolicname='biz.aQute.bnd' uri='biz.aQute.bnd/biz.aQute.bnd-1.51.1.jar' version='1.51.1'>
     <description>
       A utility and plugin to wrap, build, print, or otherwise manipulate
@@ -1479,7 +1478,7 @@
       <p n='uses' v='org.osgi.framework'/>
       <p n='version' t='version' v='1.3.0'/>
     </capability>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0))(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0))(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.command ;version=[0.10.0,1.0.0)
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
@@ -1540,10 +1539,10 @@
     <require extend='false' filter='(&amp;(package=org.apache.felix.gogo.api)(version&gt;=0.10.0))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.gogo.api ;version=0.10.0
     </require>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.command ;version=0.10.0
     </require>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.threadio)(version&gt;=0.10.0)(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.threadio)(version&gt;=0.10.0)(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.threadio ;version=0.10.0
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
@@ -1575,7 +1574,7 @@
       <p n='symbolicname' v='org.apache.felix.gogo.shell'/>
       <p n='version' t='version' v='0.10.0'/>
     </capability>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.command ;version=0.10.0
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
@@ -2034,11 +2033,956 @@
     <require extend='false' filter='(&amp;(package=org.easymock)(version&gt;=3.0.0))' multiple='false' name='package' optional='false'>
       Import package org.easymock ;version=3.0.0
     </require>
-    <require extend='false' filter='(&amp;(package=org.easymock.internal)(version&gt;=3.0.0)(poweruser=true)(mandatory:&lt;*poweruser))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.easymock.internal)(version&gt;=3.0.0)(poweruser=true))' multiple='false' name='package' optional='false'>
       Import package org.easymock.internal ;version=3.0.0
     </require>
     <require extend='false' filter='(&amp;(package=org.objenesis)(version&gt;=1.2.0))' multiple='false' name='package' optional='true'>
       Import package org.objenesis ;version=1.2.0
+    </require>
+  </resource>
+  <resource id='org.eclipse.core.jobs/3.5.100.v20110404' presentationname='Eclipse Jobs Mechanism' symbolicname='org.eclipse.core.jobs' uri='org.eclipse.core.jobs/org.eclipse.core.jobs-3.5.100.jar' version='3.5.100.v20110404'>
+    <size>
+      91044
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Eclipse Jobs Mechanism'/>
+      <p n='symbolicname' v='org.eclipse.core.jobs'/>
+      <p n='version' t='version' v='3.5.100.v20110404'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.internal.jobs'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.runtime.jobs'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=3.2.0)(!(version&gt;=4.0.0)))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; [3.2.0,4.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.debug)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.debug
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.util)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.util
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.packageadmin)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.packageadmin
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf/3.1.300.v20111230-0120' presentationname='ECF Core API' symbolicname='org.eclipse.ecf' uri='org.eclipse.ecf/org.eclipse.ecf-3.1.300.jar' version='3.1.300.v20111230-0120'>
+    <size>
+      93256
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Core API'/>
+      <p n='symbolicname' v='org.eclipse.ecf'/>
+      <p n='version' t='version' v='3.1.300.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core'/>
+      <p n='version' t='version' v='3.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.events'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.jobs'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.provider'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.security'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.start'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.status'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.user'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.core'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.registry)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.registry; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.identity)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.identity; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.core.runtime.jobs)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.core.runtime.jobs
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.concurrent.future)(version&gt;=1.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.eclipse.equinox.concurrent.future ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.3.2))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=1.3.2
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.discovery/4.0.0.v20111230-0120' presentationname='ECF Discovery API' symbolicname='org.eclipse.ecf.discovery' uri='org.eclipse.ecf.discovery/org.eclipse.ecf.discovery-4.0.0.jar' version='4.0.0.v20111230-0120'>
+    <size>
+      44117
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Discovery API'/>
+      <p n='symbolicname' v='org.eclipse.ecf.discovery'/>
+      <p n='version' t='version' v='4.0.0.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.discovery'/>
+      <p n='version' t='version' v='4.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.discovery.identity'/>
+      <p n='version' t='version' v='3.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.discovery.service'/>
+      <p n='version' t='version' v='2.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.discovery'/>
+      <p n='version' t='version' v='3.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.concurrent.future)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.concurrent.future ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.identity/3.1.200.v20111230-0120' presentationname='ECF Core Identity API' symbolicname='org.eclipse.ecf.identity' uri='org.eclipse.ecf.identity/org.eclipse.ecf.identity-3.1.200.jar' version='3.1.200.v20111230-0120'>
+    <size>
+      53166
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Core Identity API'/>
+      <p n='symbolicname' v='org.eclipse.ecf.identity'/>
+      <p n='version' t='version' v='3.1.200.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.identity'/>
+      <p n='version' t='version' v='3.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.util'/>
+      <p n='version' t='version' v='3.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.core.identity'/>
+      <p n='version' t='version' v='3.2.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.registry)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.registry; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.debug)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.debug ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.3.2))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=1.3.2
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.osgi.services.distribution/2.0.100.v20111230-0120' presentationname='ECF OSGi R4.2 Compendium Distribution' symbolicname='org.eclipse.ecf.osgi.services.distribution' uri='org.eclipse.ecf.osgi.services.distribution/org.eclipse.ecf.osgi.services.distribution-2.0.100.jar' version='2.0.100.v20111230-0120'>
+    <size>
+      13588
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF OSGi R4.2 Compendium Distribution'/>
+      <p n='symbolicname' v='org.eclipse.ecf.osgi.services.distribution'/>
+      <p n='version' t='version' v='2.0.100.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.osgi.services.distribution'/>
+      <p n='version' t='version' v='2.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.osgi.services.distribution'/>
+      <p n='version' t='version' v='2.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin)(version&gt;=1.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.osgi.services.remoteserviceadmin;
+       1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.core.util)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.core.util
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework.hooks.service)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework.hooks.service ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.remoteserviceadmin)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.remoteserviceadmin ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.osgi.services.remoteserviceadmin/2.0.100.v20111230-0120' presentationname='ECF OSGi R4.2 Remote Service Admin' symbolicname='org.eclipse.ecf.osgi.services.remoteserviceadmin' uri='org.eclipse.ecf.osgi.services.remoteserviceadmin/org.eclipse.ecf.osgi.services.remoteserviceadmin-2.0.100.jar' version='2.0.100.v20111230-0120'>
+    <size>
+      162996
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF OSGi R4.2 Remote Service Admin'/>
+      <p n='symbolicname' v='org.eclipse.ecf.osgi.services.remoteserviceadmin'/>
+      <p n='version' t='version' v='2.0.100.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.osgi.services.remoteserviceadmin'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.osgi.services.remoteserviceadmin'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=3.6.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 3.6.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy)(version&gt;=1.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy;
+       1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.core)(version&gt;=3.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.core ;version=3.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.core.identity)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.core.identity
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.core.security)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.core.security
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.core.util)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.core.util
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.discovery)(version&gt;=4.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.discovery ;version=4.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.discovery.identity)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.discovery.identity
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.remoteservice)(version&gt;=6.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.remoteservice ;version=6.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.remoteservice.events)(version&gt;=6.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.remoteservice.events ;version=6.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.concurrent.future)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.concurrent.future ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.framework.eventmgr)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.framework.eventmgr
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.event)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.event
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.packageadmin)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.packageadmin
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.remoteserviceadmin)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.remoteserviceadmin ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.5))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy/1.0.0.v20111230-0120' presentationname='ECF Remote Service Admin Proxy' symbolicname='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' uri='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy-1.0.0.jar' version='1.0.0.v20111230-0120'>
+    <size>
+      7398
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Remote Service Admin Proxy'/>
+      <p n='symbolicname' v='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy'/>
+      <p n='version' t='version' v='1.0.0.v20111230-0120'/>
+    </capability>
+    <require extend='false' filter='(|(ee=J2SE-1.5))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.provider/4.2.100.v20111230-0120' presentationname='ECF Provider API' symbolicname='org.eclipse.ecf.provider' uri='org.eclipse.ecf.provider/org.eclipse.ecf.provider-4.2.100.jar' version='4.2.100.v20111230-0120'>
+    <size>
+      127899
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Provider API'/>
+      <p n='symbolicname' v='org.eclipse.ecf.provider'/>
+      <p n='version' t='version' v='4.2.100.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.provider'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.comm'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.comm.tcp'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.generic'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.generic.gmm'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf)(version&gt;=3.1.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf; 3.1.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.sharedobject)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.sharedobject; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.3.2))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=1.3.2
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.provider.jmdns/4.1.0.v20111230-0120' presentationname='ECF Zeroconf/JMDNS Discovery Provider' symbolicname='org.eclipse.ecf.provider.jmdns' uri='org.eclipse.ecf.provider.jmdns/org.eclipse.ecf.provider.jmdns-4.1.0.jar' version='4.1.0.v20111230-0120'>
+    <size>
+      109530
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Zeroconf/JMDNS Discovery Provider'/>
+      <p n='symbolicname' v='org.eclipse.ecf.provider.jmdns'/>
+      <p n='version' t='version' v='4.1.0.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.provider.jmdns'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.jmdns.container'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.jmdns.identity'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.discovery)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.discovery; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.3.2))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=1.3.2
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.provider.remoteservice/4.0.0.v20111230-0120' presentationname='ECF RemoteService Provider' symbolicname='org.eclipse.ecf.provider.remoteservice' uri='org.eclipse.ecf.provider.remoteservice/org.eclipse.ecf.provider.remoteservice-4.0.0.jar' version='4.0.0.v20111230-0120'>
+    <size>
+      66617
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF RemoteService Provider'/>
+      <p n='symbolicname' v='org.eclipse.ecf.provider.remoteservice'/>
+      <p n='version' t='version' v='4.0.0.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.provider.remoteservice'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.provider.remoteservice.generic'/>
+      <p n='version' t='version' v='4.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.sharedobject)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.sharedobject; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.provider)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.provider; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf.remoteservice)(version&gt;=6.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf.remoteservice; 6.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.core.runtime.jobs)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.core.runtime.jobs
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.concurrent.future)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.concurrent.future
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.framework.eventmgr)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.framework.eventmgr
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.remoteservice/6.0.200.v20111230-0120' presentationname='ECF RemoteService API' symbolicname='org.eclipse.ecf.remoteservice' uri='org.eclipse.ecf.remoteservice/org.eclipse.ecf.remoteservice-6.0.200.jar' version='6.0.200.v20111230-0120'>
+    <size>
+      90433
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF RemoteService API'/>
+      <p n='symbolicname' v='org.eclipse.ecf.remoteservice'/>
+      <p n='version' t='version' v='6.0.200.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.remoteservice'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.remoteservice'/>
+      <p n='version' t='version' v='6.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.remoteservice.client'/>
+      <p n='version' t='version' v='6.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.remoteservice.events'/>
+      <p n='version' t='version' v='6.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.remoteservice.util'/>
+      <p n='version' t='version' v='6.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.remoteservice.util.tracker'/>
+      <p n='version' t='version' v='6.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.concurrent.future)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.concurrent.future ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.5)(ee=J2SE-1.4)(ee=CDC-1.0/Foundation-1.0))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5)(ee=J2SE-1.4)(ee=CDC-1.0/Foundation-1.0))
+    </require>
+  </resource>
+  <resource id='org.eclipse.ecf.sharedobject/2.2.100.v20111230-0120' presentationname='ECF Sharedobject API' symbolicname='org.eclipse.ecf.sharedobject' uri='org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar' version='2.2.100.v20111230-0120'>
+    <size>
+      93366
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='ECF Sharedobject API'/>
+      <p n='symbolicname' v='org.eclipse.ecf.sharedobject'/>
+      <p n='version' t='version' v='2.2.100.v20111230-0120'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.sharedobject'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.sharedobject.events'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.sharedobject.provider'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.sharedobject.security'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.sharedobject.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.core.util.reflection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.ecf.internal.core.sharedobject'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.registry)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.registry; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.ecf)(version&gt;=0.0.0))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.ecf; 0.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.concurrent.future)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.concurrent.future ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.3))
+    </require>
+  </resource>
+  <resource id='org.eclipse.equinox.common/3.6.0.v20110523' presentationname='Common Eclipse Runtime' symbolicname='org.eclipse.equinox.common' uri='org.eclipse.equinox.common/org.eclipse.equinox.common-3.6.0.jar' version='3.6.0.v20110523'>
+    <size>
+      105624
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Common Eclipse Runtime'/>
+      <p n='symbolicname' v='org.eclipse.equinox.common'/>
+      <p n='version' t='version' v='3.6.0.v20110523'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.internal.boot'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.core.resources,org.eclipse.core.runtime.compatibility,org.eclipse.pde.build'/>
+    </capability>
+    <capability name='package'>
+      <p n='common' v='split'/>
+      <p n='mandatory' v='common'/>
+      <p n='package' v='org.eclipse.core.internal.runtime'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.core.contenttype,  org.eclipse.core.jobs,  org.eclipse.equinox.preferences,  org.eclipse.equinox.registry,  org.eclipse.core.runtime,  org.eclipse.core.runtime.compatibility,  org.eclipse.core.filesystem,  org.eclipse.equinox.security'/>
+    </capability>
+    <capability name='package'>
+      <p n='common' v='split'/>
+      <p n='mandatory' v='common'/>
+      <p n='package' v='org.eclipse.core.runtime'/>
+      <p n='version' t='version' v='3.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.events'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.log)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.log ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.framework.log)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.framework.log ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.datalocation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.datalocation
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.debug)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.debug
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.localization)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.localization
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.urlconversion)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.urlconversion
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.util)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.util
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=[1.3.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.packageadmin)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.packageadmin
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.url)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.url
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.equinox.concurrent/1.0.200.v20110502' presentationname='Equinox Concurrent API' symbolicname='org.eclipse.equinox.concurrent' uri='org.eclipse.equinox.concurrent/org.eclipse.equinox.concurrent-1.0.200.jar' version='1.0.200.v20110502'>
+    <size>
+      19906
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Equinox Concurrent API'/>
+      <p n='symbolicname' v='org.eclipse.equinox.concurrent'/>
+      <p n='version' t='version' v='1.0.200.v20110502'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.concurrent.future'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipse.core.runtime)(version&gt;=3.4.0)(common=split))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.core.runtime ;version=3.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(|(ee=CDC-1.0/Foundation-1.0)(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=CDC-1.0/Foundation-1.0)(ee=J2SE-1.3))
+    </require>
+  </resource>
+  <resource id='org.eclipse.equinox.ds/1.3.1.R37x_v20110701' presentationname='Declarative Services' symbolicname='org.eclipse.equinox.ds' uri='org.eclipse.equinox.ds/org.eclipse.equinox.ds-1.3.1.jar' version='1.3.1.R37x_v20110701'>
+    <description>
+      This bundle provides support for OSGi Declarative Services
+    </description>
+    <size>
+      189350
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Declarative Services'/>
+      <p n='symbolicname' v='org.eclipse.equinox.ds'/>
+      <p n='version' t='version' v='1.3.1.R37x_v20110701'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.ds'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.ds.impl'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.ds.model'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.ds.storage.file'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.io'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.xml'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.xml.impl'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.string'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.felix.scr'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.internal.util.event)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.internal.util.event ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.internal.util.hash)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.internal.util.hash ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.internal.util.pool)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.internal.util.pool ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.internal.util.ref)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.internal.util.ref ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.internal.util.threadpool)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.internal.util.threadpool
+       ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.equinox.internal.util.timer)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.equinox.internal.util.timer ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.framework.console)(version&gt;=1.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.eclipse.osgi.framework.console ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.framework.log)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.framework.log ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.debug)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.debug ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.environment)(version&gt;=1.2.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.environment ;version=1.2.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.util)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.util
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.cm)(version&gt;=1.2.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.cm ;version=1.2.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.component ;version=[1.1.0,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.scr)(version&gt;=1.6.0)(!(version&gt;=1.7.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.felix.scr ;version=[1.6.0,1.7.0)
+    </require>
+    <require extend='false' filter='(|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.equinox.registry/3.5.101.R37x_v20110810-1611' presentationname='Extension Registry Support' symbolicname='org.eclipse.equinox.registry' uri='org.eclipse.equinox.registry/org.eclipse.equinox.registry-3.5.101.jar' version='3.5.101.R37x_v20110810-1611'>
+    <size>
+      183035
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Extension Registry Support'/>
+      <p n='symbolicname' v='org.eclipse.equinox.registry'/>
+      <p n='version' t='version' v='3.5.101.R37x_v20110810-1611'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.internal.adapter'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.internal.registry'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.core.runtime'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.internal.registry.osgi'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.core.runtime'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.internal.registry.spi'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='mandatory' v='registry'/>
+      <p n='package' v='org.eclipse.core.runtime'/>
+      <p n='registry' v='split'/>
+      <p n='version' t='version' v='3.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.runtime.dynamichelpers'/>
+      <p n='version' t='version' v='3.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.runtime.spi'/>
+      <p n='version' t='version' v='3.4.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(symbolicname=org.eclipse.equinox.common)(version&gt;=3.2.0)(!(version&gt;=4.0.0)))' multiple='false' name='bundle' optional='false'>
+      Require Bundle org.eclipse.equinox.common; [3.2.0,4.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.core.runtime.jobs)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.eclipse.core.runtime.jobs
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.framework.console)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.eclipse.osgi.framework.console
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.datalocation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.datalocation
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.debug)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.debug
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.environment)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.eclipse.osgi.service.environment
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.localization)(version&gt;=1.1.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.service.localization ;version=1.1.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.service.resolver)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.eclipse.osgi.service.resolver
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.storagemanager)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.storagemanager
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.osgi.util)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.osgi.util
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.packageadmin)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.packageadmin
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax.helpers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax.helpers
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.4)(ee=CDC-1.0/Foundation-1.0)(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.4)(ee=CDC-1.0/Foundation-1.0)(ee=J2SE-1.3))
     </require>
   </resource>
   <resource id='org.eclipse.equinox.supplement/1.3.0.v20100503' presentationname='Supplemental Equinox Functionality' symbolicname='org.eclipse.equinox.supplement' uri='org.eclipse.equinox.supplement/org.eclipse.equinox.supplement-1.3.0.jar' version='1.3.0.v20100503'>
@@ -2147,6 +3091,615 @@
     </require>
     <require extend='false' filter='(|(ee=J2SE-1.4)(ee=CDC-1.0/Foundation-1.0)(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
       Execution Environment (|(ee=J2SE-1.4)(ee=CDC-1.0/Foundation-1.0)(ee=J2SE-1.3))
+    </require>
+  </resource>
+  <resource id='org.eclipse.equinox.util/1.0.300.v20110502' presentationname='Equinox Util Bundle' symbolicname='org.eclipse.equinox.util' uri='org.eclipse.equinox.util/org.eclipse.equinox.util-1.0.300.jar' version='1.0.300.v20110502'>
+    <description>
+      The Equinox Util Bundle contains services to facilitate bundle
+       developers in their programming, and to lighten resource usage
+       at runtime.
+    </description>
+    <size>
+      76820
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Equinox Util Bundle'/>
+      <p n='symbolicname' v='org.eclipse.equinox.util'/>
+      <p n='version' t='version' v='1.0.300.v20110502'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.event'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.ds'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.hash'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.ds,org.eclipse.equinox.io,org.eclipse.equinox.wireadmin'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.impl.tpt'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.impl.tpt.threadpool'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.impl.tpt.timer'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.pool'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.ds,org.eclipse.equinox.io'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.ref'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.ds,org.eclipse.equinox.io,org.eclipse.equinox.ip,org.eclipse.equinox.wireadmin'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.security'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.threadpool'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.ds'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.internal.util.timer'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.ds,org.eclipse.equinox.ip'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.cm)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.cm ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=1.0.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.2.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=1.2.0
+    </require>
+    <require extend='false' filter='(|(ee=OSGi/Minimum-1.1))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=OSGi/Minimum-1.1))
+    </require>
+  </resource>
+  <resource id='org.eclipse.osgi/3.7.1.R37x_v20110808-1106' presentationname='OSGi System Bundle' symbolicname='org.eclipse.osgi' uri='org.eclipse.osgi/org.eclipse.osgi-3.7.1.jar' version='3.7.1.R37x_v20110808-1106'>
+    <description>
+      OSGi System Bundle
+    </description>
+    <size>
+      1363464
+    </size>
+    <documentation>
+      http://www.eclipse.org
+    </documentation>
+    <copyright>
+      Copyright (c) 2003, 2004 IBM Corporation and others. All rights
+       reserved. This program and the accompanying materials  are
+       made available under the terms of the Eclipse Public License
+       v1.0 which accompanies this distribution, and is available
+       at http://www.eclipse.org/legal/epl-v10.html
+    </copyright>
+    <capability name='service'>
+      <p n='service' v='org.osgi.service.packageadmin.PackageAdmin'/>
+    </capability>
+    <capability name='service'>
+      <p n='service' v='org.osgi.service.permissionadmin.PermissionAdmin'/>
+    </capability>
+    <capability name='service'>
+      <p n='service' v='org.osgi.service.startlevel.StartLevel'/>
+    </capability>
+    <capability name='service'>
+      <p n='service' v='org.eclipse.osgi.service.debug.DebugOptions'/>
+    </capability>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='OSGi System Bundle'/>
+      <p n='symbolicname' v='org.eclipse.osgi'/>
+      <p n='version' t='version' v='3.7.1.R37x_v20110808-1106'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.event'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.console'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.eventmgr'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.log'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.launch'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.datalocation'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.debug'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.environment'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.localization'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.pluginconversion'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.resolver'/>
+      <p n='version' t='version' v='1.5.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.runnable'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.security'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.urlconversion'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.signedcontent'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.storagemanager'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.util'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.log'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.launch'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.hooks.bundle'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.hooks.resolver'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.hooks.service'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.hooks.weaving'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.startlevel'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.framework.wiring'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.condpermadmin'/>
+      <p n='version' t='version' v='1.1.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.framework'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.log'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.packageadmin'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.permissionadmin'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.startlevel'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.url'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.util.tracker'/>
+      <p n='version' t='version' v='1.5.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.runtime.adaptor'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.core.runtime'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.runtime.internal.adaptor'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.core.runtime.internal.stats'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.core.runtime'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.baseadaptor'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.baseadaptor.bundlefile'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.baseadaptor.hooks'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.baseadaptor.loader'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.adaptor'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.debug'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.internal.core'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.internal.protocol'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.internal.protocol.bundleentry'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.internal.protocol.bundleresource'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.internal.protocol.reference'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.internal.reliablefile'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.framework.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.baseadaptor'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.composite'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.loader'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.loader.buddy'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.module'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.profile'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.resolver'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.serviceregistry'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.permadmin'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.provisional.service.security'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.security.ui'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.provisional.verifier'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.update.core,org.eclipse.ui.workbench,org.eclipse.equinox.p2.artifact.repository'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.service.security'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-friends' v='org.eclipse.equinox.security.ui'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.internal.signedcontent'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.osgi.service.internal.composite'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipse.equinox.log.internal'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='x-internal' v='true'/>
+    </capability>
+    <require extend='false' filter='(|(ee=J2SE-1.5)(ee=OSGi/Minimum-1.2))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5)(ee=OSGi/Minimum-1.2))
+    </require>
+  </resource>
+  <resource id='org.eclipse.osgi.services/3.3.0.v20110513' presentationname='OSGi Release 4.2.0 Services' symbolicname='org.eclipse.osgi.services' uri='org.eclipse.osgi.services/org.eclipse.osgi.services-3.3.0.jar' version='3.3.0.v20110513'>
+    <description>
+      OSGi Service Platform Release 4.2.0 Service Interfaces and
+       Classes
+    </description>
+    <size>
+      71157
+    </size>
+    <documentation>
+      http://www.eclipse.org
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='OSGi Release 4.2.0 Services'/>
+      <p n='symbolicname' v='org.eclipse.osgi.services'/>
+      <p n='version' t='version' v='3.3.0.v20110513'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.cm'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.component'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.device'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.event'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.http'/>
+      <p n='version' t='version' v='1.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.io'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.log'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.metatype'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.provisioning'/>
+      <p n='version' t='version' v='1.2.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.upnp'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.useradmin'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.wireadmin'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.2.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.2.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.cm)(version&gt;=1.3.0)(!(version&gt;=1.4.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.cm ;version=[1.3.0,1.4.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.component ;version=[1.1.0,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.device)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.device ;version=[1.1.0,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.3.0)(!(version&gt;=1.4.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.event ;version=[1.3.0,1.4.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.http)(version&gt;=1.2.1)(!(version&gt;=1.3.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.http ;version=[1.2.1,1.3.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.io)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.io ;version=[1.0.0,1.1.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=1.4.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=[1.3.0,1.4.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.metatype)(version&gt;=1.2.0)(!(version&gt;=1.3.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.metatype ;version=[1.2.0,1.3.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.provisioning)(version&gt;=1.2.0)(!(version&gt;=1.3.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.provisioning ;version=[1.2.0,1.3.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.upnp)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.upnp ;version=[1.1.0,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.useradmin)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.useradmin ;version=[1.1.0,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.wireadmin)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.wireadmin ;version=[1.0.0,1.1.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.servlet
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet.http)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.servlet.http
+    </require>
+    <require extend='false' filter='(|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.osgi.services.remoteserviceadmin/1.0.0.v20111201-0027' presentationname='OSGi Release 4.2.0 Remote Service Admin' symbolicname='org.eclipse.osgi.services.remoteserviceadmin' uri='org.eclipse.osgi.services.remoteserviceadmin/org.eclipse.osgi.services.remoteserviceadmin-1.0.0.jar' version='1.0.0.v20111201-0027'>
+    <description>
+      OSGi Service Platform Release 4.2.0 Remote Service Admin Service
+       Interfaces and Classes
+    </description>
+    <size>
+      31788
+    </size>
+    <copyright>
+      Copyright (c) 2010 Composent Inc., and others. All rights reserved.
+       This program and the accompanying materials are made available
+       under the terms of the Eclipse Public License v1.0 which accompanies
+       this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+    </copyright>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='OSGi Release 4.2.0 Remote Service Admin'/>
+      <p n='symbolicname' v='org.eclipse.osgi.services.remoteserviceadmin'/>
+      <p n='version' t='version' v='1.0.0.v20111201-0027'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.remoteserviceadmin'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework
+    </require>
+    <require extend='false' filter='(|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
+    </require>
+  </resource>
+  <resource id='org.eclipse.osgi.util/3.2.200.v20110110' presentationname='OSGi Release 4.2.0 Utility Classes' symbolicname='org.eclipse.osgi.util' uri='org.eclipse.osgi.util/org.eclipse.osgi.util-3.2.200.jar' version='3.2.200.v20110110'>
+    <description>
+      OSGi Service Platform Release 4.2.0 Utility Classes
+    </description>
+    <size>
+      23764
+    </size>
+    <documentation>
+      http://www.eclipse.org
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='OSGi Release 4.2.0 Utility Classes'/>
+      <p n='symbolicname' v='org.eclipse.osgi.util'/>
+      <p n='version' t='version' v='3.2.200.v20110110'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.util.measurement'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.util.position'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.util.xml'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.1.0))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=1.1.0
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.measurement)(version&gt;=1.0.1)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.measurement ;version=[1.0.1,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.position)(version&gt;=1.0.1)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.position ;version=[1.0.1,1.2.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.xml)(version&gt;=1.0.1)(!(version&gt;=1.2.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.xml ;version=[1.0.1,1.2.0)
+    </require>
+    <require extend='false' filter='(|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=OSGi/Minimum-1.2)(ee=CDC-1.1/Foundation-1.1)(ee=J2SE-1.4))
     </require>
   </resource>
   <resource id='org.mockito.mockito-all/1.8.5' presentationname='Mockito Mock Library for Java. Hamcrest-core &amp; Objenesis included in the bundle.' symbolicname='org.mockito.mockito-all' uri='org.mockito.mockito-all/org.mockito.mockito-all-1.8.5.jar' version='1.8.5'>
