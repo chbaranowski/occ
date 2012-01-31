@@ -1,7 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
-
-<repository lastmodified='20120121182817.289' name='Release'>
+<repository lastmodified='20120131221511.705' name='Release'>
+  <resource id='org.eclipselabs.occ.ecf/1.0.0' presentationname='org.eclipselabs.occ.ecf' symbolicname='org.eclipselabs.occ.ecf' uri='org.eclipselabs.occ.ecf/org.eclipselabs.occ.ecf-1.0.0.jar' version='1.0.0'>
+    <size>
+      4503
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.ecf'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.ecf'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.osgi.services.distribution)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.osgi.services.distribution ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipse.ecf.provider.jmdns.identity)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.eclipse.ecf.provider.jmdns.identity
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
   <resource id='org.eclipselabs.occ.simbad/1.4.1' presentationname='org.eclipselabs.occ.simbad' symbolicname='org.eclipselabs.occ.simbad' uri='org.eclipselabs.occ.simbad/org.eclipselabs.occ.simbad-1.4.1.jar' version='1.4.1'>
     <size>
       275298
