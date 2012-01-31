@@ -1,0 +1,8 @@
+-buildpath: biz.aQute.bnd.annotation;version=1.51.1,\
+	osgi.cmpn;version=4.2.0.200908310645,\
+	osgi.core;version=4.3.0.201102171602,\
+	org.eclipse.ecf.osgi.services.distribution;version=2.0.100.v20111230-0120,\
+	org.eclipse.ecf.provider.jmdns;version=4.1.0.v20111230-0120
+Private-Package: org.eclipselabs.occ.ecf.initialze
+Bundle-Activator: org.eclipselabs.occ.ecf.initialze.Activiator
+Bundle-Version: 1.0.0
