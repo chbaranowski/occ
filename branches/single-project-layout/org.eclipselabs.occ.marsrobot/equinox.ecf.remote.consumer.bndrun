@@ -1,4 +1,4 @@
--runvm: -Dnet.mdns.interface=192.168.178.27
+-runvm: -Dnet.mdns.interface=localhost
 -runfw: org.eclipse.osgi;version='[3.7.1.R37x_v20110808-1106,3.7.1.R37x_v20110808-1106]'
 -runrequire: bundle:(symbolicname=org.eclipse.equinox.ds),\
 	bundle:(symbolicname=org.eclipse.ecf.discovery),\

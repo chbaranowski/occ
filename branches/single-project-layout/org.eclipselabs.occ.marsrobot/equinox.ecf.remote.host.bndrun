@@ -1,3 +1,4 @@
+-runvm: -Dnet.mdns.interface=localhost
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
 	javax.vecmath; version=0.0.0
@@ -74,4 +75,3 @@
 	org.eclipse.ecf.osgi.services.distribution;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.osgi.services.distribution/org.eclipse.ecf.osgi.services.distribution-2.0.100.jar;version='[2.0.100,2.0.101)',\
 	org.eclipse.ecf.provider.remoteservice;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.provider.remoteservice/org.eclipse.ecf.provider.remoteservice-4.0.0.jar;version='[4.0.0,4.0.1)'
 -runproperties: osgi.console=true
--runvm: -Dnet.mdns.interface=192.168.178.27
