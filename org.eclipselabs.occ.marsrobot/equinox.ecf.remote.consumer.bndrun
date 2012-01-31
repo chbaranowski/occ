@@ -6,15 +6,14 @@
 	bundle:(symbolicname=org.eclipse.ecf.provider.remoteservice),\
 	bundle:(symbolicname=org.eclipse.ecf.osgi.services.distribution),\
 	bundle:(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy),\
-	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.ecf.initializer),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.remote.api),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.remote.consumer),\
 	bundle:(symbolicname=org.apache.felix.gogo.command),\
 	bundle:(symbolicname=org.apache.felix.gogo.runtime),\
-	bundle:(symbolicname=org.apache.felix.gogo.shell)
+	bundle:(symbolicname=org.apache.felix.gogo.shell),\
+	bundle:(symbolicname=org.eclipselabs.occ.ecf)
 -runee: JavaSE-1.6
 -runbundles: org.eclipse.equinox.registry;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.equinox.registry/org.eclipse.equinox.registry-3.5.101.jar;version='[3.5.101,3.5.102)',\
-	org.eclipselabs.occ.marsrobot.ecf.initializer;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.ecf.initializer.jar;version=latest,\
 	org.eclipse.ecf.sharedobject;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar;version='[2.2.100,2.2.101)',\
 	org.eclipse.equinox.concurrent;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.equinox.concurrent/org.eclipse.equinox.concurrent-1.0.200.jar;version='[1.0.200,1.0.201)',\
 	org.eclipse.ecf.provider;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.provider/org.eclipse.ecf.provider-4.2.100.jar;version='[4.2.100,4.2.101)',\
@@ -25,16 +24,17 @@
 	org.eclipselabs.occ.marsrobot.remote.api;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.remote.api.jar;version=latest,\
 	org.eclipse.equinox.ds;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.equinox.ds/org.eclipse.equinox.ds-1.3.1.jar;version='[1.3.1,1.3.2)',\
 	org.eclipse.equinox.util;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.equinox.util/org.eclipse.equinox.util-1.0.300.jar;version='[1.0.300,1.0.301)',\
-	org.eclipse.ecf.provider.jmdns;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.provider.jmdns/org.eclipse.ecf.provider.jmdns-4.1.0.jar;version='[4.1.0,4.1.1)',\
 	org.apache.felix.gogo.shell;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.apache.felix.gogo.shell/org.apache.felix.gogo.shell-0.10.0.jar;version='[0.10.0,0.10.1)',\
+	org.eclipse.ecf.provider.jmdns;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.provider.jmdns/org.eclipse.ecf.provider.jmdns-4.1.0.jar;version='[4.1.0,4.1.1)',\
 	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy-1.0.0.jar;version='[1.0.0,1.0.1)',\
 	org.eclipse.osgi.services;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.osgi.services/org.eclipse.osgi.services-3.3.0.jar;version='[3.3.0,3.3.1)',\
 	org.eclipse.ecf.remoteservice;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.remoteservice/org.eclipse.ecf.remoteservice-6.0.200.jar;version='[6.0.200,6.0.201)',\
 	org.eclipselabs.occ.marsrobot.remote.consumer;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.remote.consumer.jar;version=latest,\
 	org.eclipse.core.jobs;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.core.jobs/org.eclipse.core.jobs-3.5.100.jar;version='[3.5.100,3.5.101)',\
 	org.eclipse.osgi.services.remoteserviceadmin;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.osgi.services.remoteserviceadmin/org.eclipse.osgi.services.remoteserviceadmin-1.0.0.jar;version='[1.0.0,1.0.1)',\
-	org.eclipse.ecf.identity;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.identity/org.eclipse.ecf.identity-3.1.200.jar;version='[3.1.200,3.1.201)',\
 	org.apache.felix.gogo.command;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.apache.felix.gogo.command/org.apache.felix.gogo.command-0.12.0.jar;version='[0.12.0,0.12.1)',\
+	org.eclipse.ecf.identity;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.identity/org.eclipse.ecf.identity-3.1.200.jar;version='[3.1.200,3.1.201)',\
 	org.eclipse.ecf.discovery;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.discovery/org.eclipse.ecf.discovery-4.0.0.jar;version='[4.0.0,4.0.1)',\
+	org.eclipselabs.occ.ecf;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.ecf/generated/org.eclipselabs.occ.ecf.jar;version=latest,\
 	org.eclipse.ecf.osgi.services.distribution;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.osgi.services.distribution/org.eclipse.ecf.osgi.services.distribution-2.0.100.jar;version='[2.0.100,2.0.101)',\
 	org.eclipse.ecf.provider.remoteservice;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.provider.remoteservice/org.eclipse.ecf.provider.remoteservice-4.0.0.jar;version='[4.0.0,4.0.1)'

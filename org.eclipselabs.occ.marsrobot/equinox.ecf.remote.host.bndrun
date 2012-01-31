@@ -8,7 +8,6 @@
 	bundle:(symbolicname=org.eclipse.ecf.provider.remoteservice),\
 	bundle:(symbolicname=org.eclipse.ecf.osgi.services.distribution),\
 	bundle:(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy),\
-	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.ecf.initializer),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.remote.api),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.remote.host),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.agentfollower),\
@@ -16,7 +15,6 @@
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.arch),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.box),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.desktop),\
-	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.ecf.initializer),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.extender),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.provisioning),\
 	bundle:(symbolicname=org.eclipselabs.occ.marsrobot.remote.api),\
@@ -30,11 +28,11 @@
 	bundle:(symbolicname=org.apache.felix.configadmin),\
 	bundle:(symbolicname=org.apache.felix.eventadmin),\
 	bundle:(symbolicname=org.apache.felix.metatype),\
-	bundle:(symbolicname=org.apache.felix.webconsole)
+	bundle:(symbolicname=org.apache.felix.webconsole),\
+	bundle:(symbolicname=org.eclipselabs.occ.ecf)
 -runee: JavaSE-1.6
 -runbundles: org.eclipse.equinox.registry;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.equinox.registry/org.eclipse.equinox.registry-3.5.101.jar;version='[3.5.101,3.5.102)',\
 	org.eclipselabs.occ.marsrobot.extender;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.extender.jar;version=latest,\
-	org.eclipselabs.occ.marsrobot.ecf.initializer;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.ecf.initializer.jar;version=latest,\
 	org.eclipse.ecf.sharedobject;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar;version='[2.2.100,2.2.101)',\
 	org.eclipselabs.occ.marsrobot.robot;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.robot.jar;version=latest,\
 	org.eclipse.equinox.concurrent;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.equinox.concurrent/org.eclipse.equinox.concurrent-1.0.200.jar;version='[1.0.200,1.0.201)',\
@@ -71,6 +69,7 @@
 	org.eclipselabs.occ.marsrobot.box;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.box.jar;version=latest,\
 	org.eclipse.ecf.discovery;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.discovery/org.eclipse.ecf.discovery-4.0.0.jar;version='[4.0.0,4.0.1)',\
 	org.eclipselabs.occ.simbad;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.simbad/generated/org.eclipselabs.occ.simbad.jar;version=latest,\
+	org.eclipselabs.occ.ecf;resolution=file:/Users/developer/Develop/workspace-bndtools/org.eclipselabs.occ.ecf/generated/org.eclipselabs.occ.ecf.jar;version=latest,\
 	org.apache.felix.eventadmin;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.apache.felix.eventadmin/org.apache.felix.eventadmin-1.2.14.jar;version='[1.2.14,1.2.15)',\
 	org.eclipse.ecf.osgi.services.distribution;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.osgi.services.distribution/org.eclipse.ecf.osgi.services.distribution-2.0.100.jar;version='[2.0.100,2.0.101)',\
 	org.eclipse.ecf.provider.remoteservice;resolution=file:/Users/developer/Develop/workspace-bndtools/cnf/repo/org.eclipse.ecf.provider.remoteservice/org.eclipse.ecf.provider.remoteservice-4.0.0.jar;version='[4.0.0,4.0.1)'
