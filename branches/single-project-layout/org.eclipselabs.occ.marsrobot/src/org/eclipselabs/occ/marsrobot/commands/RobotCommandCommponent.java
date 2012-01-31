@@ -13,7 +13,7 @@ import aQute.bnd.annotation.component.Reference;
 		CommandProcessor.COMMAND_SCOPE + "=robot", 
 		CommandProcessor.COMMAND_FUNCTION + "=move | rotateY" 
 })
-public class RobotCommandCommponent implements RobotCommand {
+public class RobotCommandCommponent implements RobotCommands {
 
 	Collection<Robot> robots = new Vector<Robot>();
 

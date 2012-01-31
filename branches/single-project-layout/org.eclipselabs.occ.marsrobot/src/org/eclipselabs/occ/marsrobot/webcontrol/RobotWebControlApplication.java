@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.felix.service.command.CommandProcessor;
-import org.eclipselabs.occ.marsrobot.commands.RobotCommand;
+import org.eclipselabs.occ.marsrobot.commands.RobotCommands;
 import org.eclipselabs.occ.marsrobot.robot.Robot;
 
 import aQute.bnd.annotation.component.Component;
@@ -38,7 +38,7 @@ public class RobotWebControlApplication extends Application {
 	final Panel contentPanel = new Panel();
 	private Table table = new Table();
 
-	private Map<String, RobotCommand> commandRobot = Collections.synchronizedMap(new HashMap<String, RobotCommand>());
+	private Map<String, RobotCommands> commandRobot = Collections.synchronizedMap(new HashMap<String, RobotCommands>());
 	private Map<String, Method> commands = Collections.synchronizedMap(new HashMap<String, Method>());
 	private Collection<Robot> robots = Collections.synchronizedCollection(new ArrayList<Robot>());
 
@@ -105,7 +105,7 @@ public class RobotWebControlApplication extends Application {
 			}
 
 			final TextField field = new TextField();
-			final RobotCommand cmd = commandRobot.get(oneMethodName);
+			final RobotCommands cmd = commandRobot.get(oneMethodName);
 			Button button = new Button("Execute");
 			button.addListener(new Button.ClickListener() {
 
@@ -158,7 +158,7 @@ public class RobotWebControlApplication extends Application {
 	}
 
 	@Reference(multiple = true, optional = false, dynamic = true)
-	public void addRobotCommand(RobotCommand cmd, Map<?,?> properties) {
+	public void addRobotCommand(RobotCommands cmd, Map<?,?> properties) {
 		String[] methodNames = (String[]) properties.get(CommandProcessor.COMMAND_FUNCTION);
 
 		Map<String, Method> methodsByName = new HashMap<String, Method>();
@@ -173,7 +173,7 @@ public class RobotWebControlApplication extends Application {
 		updateCommandTable();
 	}
 
-	public void removeRobotCommand(RobotCommand cmd) {
+	public void removeRobotCommand(RobotCommands cmd) {
 		commands.remove(cmd);
 		updateCommandTable();
 	}
