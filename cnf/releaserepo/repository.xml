@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
-<repository lastmodified='20120131221511.705' name='Release'>
+
+<repository lastmodified='20120201085952.764' name='Release'>
   <resource id='org.eclipselabs.occ.ecf/1.0.0' presentationname='org.eclipselabs.occ.ecf' symbolicname='org.eclipselabs.occ.ecf' uri='org.eclipselabs.occ.ecf/org.eclipselabs.occ.ecf-1.0.0.jar' version='1.0.0'>
     <size>
       4503
@@ -19,6 +20,364 @@
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
       Import package org.osgi.framework ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.agentfollower/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.agentfollower' symbolicname='org.eclipselabs.occ.marsrobot.agentfollower' uri='org.eclipselabs.occ.marsrobot.agentfollower/org.eclipselabs.occ.marsrobot.agentfollower-1.0.1.jar' version='1.0.1'>
+    <size>
+      8233
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.agentfollower'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.agentfollower'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.desktop)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.desktop ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.world)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.world ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.event ;version=[1.2.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.gui)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.gui ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.api/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.api' symbolicname='org.eclipselabs.occ.marsrobot.api' uri='org.eclipselabs.occ.marsrobot.api/org.eclipselabs.occ.marsrobot.api-1.0.1.jar' version='1.0.1'>
+    <size>
+      10116
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.api'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.api'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipselabs.occ.marsrobot.desktop'/>
+      <p n='uses' v='javax.swing'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipselabs.occ.marsrobot.robot'/>
+      <p n='uses' v='simbad.sim'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipselabs.occ.marsrobot.world'/>
+      <p n='uses' v='simbad.sim'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipselabs.occ.marsrobot.extender'/>
+      <p n='uses' v='simbad.sim'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.arch/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.arch' symbolicname='org.eclipselabs.occ.marsrobot.arch' uri='org.eclipselabs.occ.marsrobot.arch/org.eclipselabs.occ.marsrobot.arch-1.0.1.jar' version='1.0.1'>
+    <size>
+      3561
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.arch'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.arch'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.vecmath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.vecmath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.extender)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.extender ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.box/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.box' symbolicname='org.eclipselabs.occ.marsrobot.box' uri='org.eclipselabs.occ.marsrobot.box/org.eclipselabs.occ.marsrobot.box-1.0.1.jar' version='1.0.1'>
+    <size>
+      3584
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.box'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.box'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.vecmath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.vecmath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.extender)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.extender ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.commands/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.commands' symbolicname='org.eclipselabs.occ.marsrobot.commands' uri='org.eclipselabs.occ.marsrobot.commands/org.eclipselabs.occ.marsrobot.commands-1.0.1.jar' version='1.0.1'>
+    <size>
+      6536
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.commands'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.commands'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipselabs.occ.marsrobot.commands'/>
+      <p n='uses' v='org.eclipselabs.occ.marsrobot.robot'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.robot)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.robot ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.desktop/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.desktop' symbolicname='org.eclipselabs.occ.marsrobot.desktop' uri='org.eclipselabs.occ.marsrobot.desktop/org.eclipselabs.occ.marsrobot.desktop-1.0.1.jar' version='1.0.1'>
+    <size>
+      6202
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.desktop'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.desktop'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.desktop)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.desktop ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.extender/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.extender' symbolicname='org.eclipselabs.occ.marsrobot.extender' uri='org.eclipselabs.occ.marsrobot.extender/org.eclipselabs.occ.marsrobot.extender-1.0.1.jar' version='1.0.1'>
+    <size>
+      7742
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.extender'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.extender'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.extender)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.extender ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.world)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.world ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.6.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=[1.4.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.provisioning/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.provisioning' symbolicname='org.eclipselabs.occ.marsrobot.provisioning' uri='org.eclipselabs.occ.marsrobot.provisioning/org.eclipselabs.occ.marsrobot.provisioning-1.0.1.jar' version='1.0.1'>
+    <size>
+      30578
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.provisioning'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.provisioning'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.6.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.log ;version=[1.3.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.remote.api/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.remote.api' symbolicname='org.eclipselabs.occ.marsrobot.remote.api' uri='org.eclipselabs.occ.marsrobot.remote.api/org.eclipselabs.occ.marsrobot.remote.api-1.0.1.jar' version='1.0.1'>
+    <size>
+      3516
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.remote.api'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.remote.api'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.eclipselabs.occ.marsrobot.remote'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.remote.consumer/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.remote.consumer' symbolicname='org.eclipselabs.occ.marsrobot.remote.consumer' uri='org.eclipselabs.occ.marsrobot.remote.consumer/org.eclipselabs.occ.marsrobot.remote.consumer-1.0.1.jar' version='1.0.1'>
+    <size>
+      5622
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.remote.consumer'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.remote.consumer'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.remote)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.remote ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.remote.host/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.remote.host' symbolicname='org.eclipselabs.occ.marsrobot.remote.host' uri='org.eclipselabs.occ.marsrobot.remote.host/org.eclipselabs.occ.marsrobot.remote.host-1.0.1.jar' version='1.0.1'>
+    <size>
+      6135
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.remote.host'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.remote.host'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.remote)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.remote ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.cm)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.cm ;version=[1.3.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.robot/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.robot' symbolicname='org.eclipselabs.occ.marsrobot.robot' uri='org.eclipselabs.occ.marsrobot.robot/org.eclipselabs.occ.marsrobot.robot-1.0.1.jar' version='1.0.1'>
+    <size>
+      23567
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.robot'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.robot'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.media.j3d)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.media.j3d
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.vecmath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.vecmath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.robot)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.robot ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.world)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.world ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.sensordevices/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.sensordevices' symbolicname='org.eclipselabs.occ.marsrobot.sensordevices' uri='org.eclipselabs.occ.marsrobot.sensordevices/org.eclipselabs.occ.marsrobot.sensordevices-1.0.1.jar' version='1.0.1'>
+    <size>
+      7170
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.sensordevices'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.sensordevices'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.desktop)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.desktop ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.world)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.world ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.event ;version=[1.2.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.wall/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.wall' symbolicname='org.eclipselabs.occ.marsrobot.wall' uri='org.eclipselabs.occ.marsrobot.wall/org.eclipselabs.occ.marsrobot.wall-1.0.1.jar' version='1.0.1'>
+    <size>
+      21334
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.wall'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.wall'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.vecmath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.vecmath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.world)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.world ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.webcontrol/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.webcontrol' symbolicname='org.eclipselabs.occ.marsrobot.webcontrol' uri='org.eclipselabs.occ.marsrobot.webcontrol/org.eclipselabs.occ.marsrobot.webcontrol-1.0.1.jar' version='1.0.1'>
+    <size>
+      11199
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.webcontrol'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.webcontrol'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.vaadin)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.vaadin
+    </require>
+    <require extend='false' filter='(&amp;(package=com.vaadin.data)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.vaadin.data
+    </require>
+    <require extend='false' filter='(&amp;(package=com.vaadin.ui)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.vaadin.ui
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.commands)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.commands ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.robot)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.robot ;version=[1.0.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.eclipselabs.occ.marsrobot.world/1.0.1' presentationname='org.eclipselabs.occ.marsrobot.world' symbolicname='org.eclipselabs.occ.marsrobot.world' uri='org.eclipselabs.occ.marsrobot.world/org.eclipselabs.occ.marsrobot.world-1.0.1.jar' version='1.0.1'>
+    <size>
+      10098
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.marsrobot.world'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.marsrobot.world'/>
+      <p n='version' t='version' v='1.0.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.media.j3d)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.media.j3d
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.desktop)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.desktop ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.eclipselabs.occ.marsrobot.world)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.eclipselabs.occ.marsrobot.world ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.event)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.event ;version=[1.2.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=simbad.sim)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package simbad.sim ;version=[1.0.0,2.0.0)
     </require>
   </resource>
   <resource id='org.eclipselabs.occ.simbad/1.4.1' presentationname='org.eclipselabs.occ.simbad' symbolicname='org.eclipselabs.occ.simbad' uri='org.eclipselabs.occ.simbad/org.eclipselabs.occ.simbad-1.4.1.jar' version='1.4.1'>
