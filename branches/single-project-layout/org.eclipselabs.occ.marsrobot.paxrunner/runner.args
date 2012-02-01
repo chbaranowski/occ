@@ -1,0 +1,74 @@
+# PAX runner logging
+--log=INFO
+
+# Start a clean PAX runner
+--clean
+
+# VM Options
+--vmo=-Dnet.mdns.interface=localhost
+
+# Use Equinox as OSGi framework
+--platform=equinox
+
+# Specify additional java packages to be exported by System Bundle.
+# (export the Java 3D APIs)
+--systemPackages=com.sun.j3d.utils.geometry; version=0.0.0, \
+	javax.media.j3d; version=0.0.0, \
+	javax.vecmath; version=0.0.0
+
+# OBR Repositories (Bndtools)
+--obr.repository.url=file:../cnf/releaserepo/repository.xml \
+	file:../cnf/repo/repository.xml
+
+# Platform bundles to install
+
+obr:org.eclipse.osgi.services
+obr:org.eclipse.osgi.services.remoteserviceadmin
+
+obr:org.eclipse.equinox.registry
+obr:org.eclipse.equinox.ds
+obr:org.eclipse.equinox.concurrent
+obr:org.eclipse.equinox.common
+obr:org.eclipse.equinox.util
+
+obr:org.eclipse.core.jobs
+
+obr:org.eclipse.ecf
+obr:org.eclipse.ecf.sharedobject
+obr:org.eclipse.ecf.identity
+obr:org.eclipse.ecf.discovery
+obr:org.eclipse.ecf.provider
+obr:org.eclipse.ecf.provider.jmdns
+obr:org.eclipse.ecf.remoteservice
+obr:org.eclipse.ecf.osgi.services.remoteserviceadmin
+obr:org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy
+obr:org.eclipse.ecf.osgi.services.distribution
+obr:org.eclipse.ecf.provider.remoteservice
+
+obr:org.apache.felix.configadmin
+obr:org.apache.felix.eventadmin
+obr:org.apache.felix.metatype
+obr:org.apache.felix.http.jetty
+obr:org.apache.felix.webconsole
+
+obr:org.vaadin.osgi
+obr:org.vaadin.osgi.staticres
+obr:com.vaadin
+
+obr:org.eclipselabs.occ.simbad
+obr:org.eclipselabs.occ.marsrobot.api
+obr:org.eclipselabs.occ.marsrobot.desktop
+obr:org.eclipselabs.occ.marsrobot.extender
+obr:org.eclipselabs.occ.marsrobot.commands
+obr:org.eclipselabs.occ.marsrobot.remote.api
+obr:org.eclipselabs.occ.marsrobot.remote.host
+obr:org.eclipselabs.occ.marsrobot.arch
+obr:org.eclipselabs.occ.marsrobot.box
+obr:org.eclipselabs.occ.marsrobot.agentfollower
+obr:org.eclipselabs.occ.marsrobot.remote.api
+obr:org.eclipselabs.occ.marsrobot.remote.host
+obr:org.eclipselabs.occ.marsrobot.robot
+obr:org.eclipselabs.occ.marsrobot.sensordevices
+obr:org.eclipselabs.occ.marsrobot.wall
+obr:org.eclipselabs.occ.marsrobot.world
+obr:org.eclipselabs.occ.marsrobot.webcontrol
