@@ -1,2 +1,3 @@
 Export-Package: org.eclipselabs.occ.marsrobot.commands
 Service-Component: *
+Bundle-Version: 1.0.1

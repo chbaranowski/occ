@@ -1,2 +1,3 @@
 Private-Package: org.eclipselabs.occ.marsrobot.remote.consumer
 Service-Component: *
+Bundle-Version: 1.0.1
