@@ -1,2 +1,3 @@
 Private-Package: org.eclipselabs.occ.marsrobot.arch
 StaticObject-Class: org.eclipselabs.occ.marsrobot.arch.ArchStaticObject
+Bundle-Version: 1.0.1

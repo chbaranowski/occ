@@ -2,3 +2,4 @@ Export-Package: org.eclipselabs.occ.marsrobot.desktop,\
 	org.eclipselabs.occ.marsrobot.robot,\
 	org.eclipselabs.occ.marsrobot.world,\
 	org.eclipselabs.occ.marsrobot.extender
+Bundle-Version: 1.0.1
