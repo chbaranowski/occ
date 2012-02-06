@@ -3,7 +3,8 @@
 	osgi.cmpn;version=4.2.0.200908310645,\
 	osgi.core;version=4.3.0.201102171602,\
 	org.apache.felix.gogo.runtime;version=0.10.0,\
-	com.vaadin;version=6.7.4
+	com.vaadin;version=6.7.4,\
+	javax.persistence;version=2.0.3.v201010191057
 -sub: *.bnd
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
@@ -22,6 +23,16 @@
 	org.apache.felix.gogo.shell;version=0.10.0,\
 	org.vaadin.osgi;version=1.0.1,\
 	org.vaadin.osgi.staticres;version=1.0.1,\
-	com.vaadin;version=6.7.4
+	com.vaadin;version=6.7.4,\
+	osgi.enterprise;version=4.2.0.201003190513,\
+	org.eclipse.persistence.jpa;version=2.3.2.v20111125-r10461,\
+	org.eclipse.persistence.core;version=2.3.2.v20111125-r10461,\
+	org.eclipse.persistence.asm;version=2.3.2.v20111125-r10461,\
+	org.eclipse.persistence.antlr;version=2.3.2.v20111125-r10461,\
+	org.eclipse.gemini.jpa;version=1.0.0.RELEASE,\
+	org.eclipse.gemini.dbaccess.derby;version=1.0.0.RELEASE,\
+	javax.persistence;version=2.0.3.v201010191057,\
+	org.apache.derby;version=10.5.1.1,\
+	org.eclipselabs.occ.derby;version=1.0.0
 -runee: JavaSE-1.6
 Bundle-Version: 1.0.0
