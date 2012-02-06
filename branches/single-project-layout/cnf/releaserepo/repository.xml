@@ -1,7 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
 
-<repository lastmodified='20120201085952.764' name='Release'>
+<repository lastmodified='20120206231305.371' name='Release'>
+  <resource id='org.eclipselabs.occ.derby/1.0.0' presentationname='org.eclipselabs.occ.derby' symbolicname='org.eclipselabs.occ.derby' uri='org.eclipselabs.occ.derby/org.eclipselabs.occ.derby-1.0.0.jar' version='1.0.0'>
+    <size>
+      3993
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='org.eclipselabs.occ.derby'/>
+      <p n='symbolicname' v='org.eclipselabs.occ.derby'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.packageadmin)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.packageadmin ;version=[1.2.0,2.0.0)
+    </require>
+  </resource>
   <resource id='org.eclipselabs.occ.ecf/1.0.0' presentationname='org.eclipselabs.occ.ecf' symbolicname='org.eclipselabs.occ.ecf' uri='org.eclipselabs.occ.ecf/org.eclipselabs.occ.ecf-1.0.0.jar' version='1.0.0'>
     <size>
       4503
