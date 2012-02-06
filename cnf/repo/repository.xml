@@ -1624,7 +1624,7 @@
       <p n='uses' v='org.osgi.framework'/>
       <p n='version' t='version' v='1.3.0'/>
     </capability>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0))(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0))(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.command ;version=[0.10.0,1.0.0)
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
@@ -1685,10 +1685,10 @@
     <require extend='false' filter='(&amp;(package=org.apache.felix.gogo.api)(version&gt;=0.10.0))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.gogo.api ;version=0.10.0
     </require>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.command ;version=0.10.0
     </require>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.threadio)(version&gt;=0.10.0)(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.threadio)(version&gt;=0.10.0)(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.threadio ;version=0.10.0
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
@@ -1720,7 +1720,7 @@
       <p n='symbolicname' v='org.apache.felix.gogo.shell'/>
       <p n='version' t='version' v='0.10.0'/>
     </capability>
-    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional)(mandatory:&lt;*status))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.apache.felix.service.command)(version&gt;=0.10.0)(status=provisional))' multiple='false' name='package' optional='false'>
       Import package org.apache.felix.service.command ;version=0.10.0
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
@@ -2179,7 +2179,7 @@
     <require extend='false' filter='(&amp;(package=org.easymock)(version&gt;=3.0.0))' multiple='false' name='package' optional='false'>
       Import package org.easymock ;version=3.0.0
     </require>
-    <require extend='false' filter='(&amp;(package=org.easymock.internal)(version&gt;=3.0.0)(poweruser=true)(mandatory:&lt;*poweruser))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.easymock.internal)(version&gt;=3.0.0)(poweruser=true))' multiple='false' name='package' optional='false'>
       Import package org.easymock.internal ;version=3.0.0
     </require>
     <require extend='false' filter='(&amp;(package=org.objenesis)(version&gt;=1.2.0))' multiple='false' name='package' optional='true'>
@@ -2909,7 +2909,7 @@
       <p n='version' t='version' v='1.0.0'/>
       <p n='x-internal' v='true'/>
     </capability>
-    <require extend='false' filter='(&amp;(package=org.eclipse.core.runtime)(version&gt;=3.4.0)(common=split)(mandatory:&lt;*common))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=org.eclipse.core.runtime)(version&gt;=3.4.0)(common=split))' multiple='false' name='package' optional='false'>
       Import package org.eclipse.core.runtime ;version=3.4.0
     </require>
     <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
@@ -3383,16 +3383,16 @@
     <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
       Import package javax.naming
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence)(version&gt;=1.1.0)(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence)(version&gt;=1.1.0)(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence ;version=1.1.0
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.criteria)(version&gt;=1.1.0)(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.criteria)(version&gt;=1.1.0)(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence.criteria ;version=1.1.0
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.metamodel)(version&gt;=1.1.0)(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.metamodel)(version&gt;=1.1.0)(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence.metamodel ;version=1.1.0
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.spi)(version&gt;=1.1.0)(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.spi)(version&gt;=1.1.0)(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence.spi ;version=1.1.0
     </require>
     <require extend='false' filter='(&amp;(package=javax.sql)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
@@ -4845,10 +4845,10 @@
     <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
       Import package javax.naming
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence)(version&gt;=1.1.0)(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='true'>
+    <require extend='false' filter='(&amp;(package=javax.persistence)(version&gt;=1.1.0)(jpa=2.0))' multiple='false' name='package' optional='true'>
       Import package javax.persistence ;version=1.1.0
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.spi)(version&gt;=1.1.0)(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='true'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.spi)(version&gt;=1.1.0)(jpa=2.0))' multiple='false' name='package' optional='true'>
       Import package javax.persistence.spi ;version=1.1.0
     </require>
     <require extend='false' filter='(&amp;(package=javax.resource)(version&gt;=1.5.0))' multiple='false' name='package' optional='true'>
@@ -5128,16 +5128,16 @@
     <require extend='false' filter='(&amp;(symbolicname=org.eclipse.persistence.asm)(version&gt;=2.3.2))' multiple='false' name='bundle' optional='true'>
       Require Bundle org.eclipse.persistence.asm; 2.3.2
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence ;version=[1.1.0,2.1.0)
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.criteria)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.criteria)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence.criteria ;version=[1.1.0,2.1.0)
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.metamodel)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.metamodel)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence.metamodel ;version=[1.1.0,2.1.0)
     </require>
-    <require extend='false' filter='(&amp;(package=javax.persistence.spi)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0)(mandatory:&lt;*jpa))' multiple='false' name='package' optional='false'>
+    <require extend='false' filter='(&amp;(package=javax.persistence.spi)(version&gt;=1.1.0)(!(version&gt;=2.1.0))(jpa=2.0))' multiple='false' name='package' optional='false'>
       Import package javax.persistence.spi ;version=[1.1.0,2.1.0)
     </require>
     <require extend='false' filter='(&amp;(package=javax.sql)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
