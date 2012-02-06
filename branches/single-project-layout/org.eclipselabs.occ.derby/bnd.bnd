@@ -1,0 +1,5 @@
+-buildpath: biz.aQute.bnd.annotation;version=1.51.1,\
+	osgi.core;version=4.2.0.200908310645
+Service-Component: *
+Private-Package: org.eclipselabs.occ.derby
+Bundle-Version: 1.0.0
