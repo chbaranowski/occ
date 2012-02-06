@@ -1,0 +1,3 @@
+Private-Package: org.eclipselabs.occ.marsrobot.mission
+Service-Component: *
+Meta-Persistence: org/eclipselabs/occ/marsrobot/mission/persistence.xml
