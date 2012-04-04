@@ -3,6 +3,7 @@ package org.eclipselabs.occ.marsrobot.remote.consumer;
 import org.apache.felix.service.command.CommandProcessor;
 import org.eclipselabs.occ.marsrobot.remote.WorldService;
 
+import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
 
@@ -19,6 +20,11 @@ public class RemoteConsole implements ConsoleCommands {
 	@Reference
 	public void setWorldService(WorldService worldService) {
 		this.worldService = worldService;
+	}
+	
+	@Activate
+	public void activate(){
+		System.out.println("OSGi Remote Service found demo now works... ");
 	}
 	
 	public void createWall(int x, int y, int z, int length, int height, int rotate){

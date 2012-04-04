@@ -12,7 +12,8 @@
 	org.apache.felix.gogo.shell;version=0.10.0,\
 	org.apache.felix.webconsole;version=3.1.8,\
 	org.eclipselabs.occ.simbad;version=1.4.1,\
-	org.eclipselabs.occ.marsrobot.provisioning;version=latest
+	org.eclipselabs.occ.marsrobot.provisioning;version=latest,\
+	org.eclipselabs.occ.marsrobot.api;version=latest
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
 	javax.vecmath; version=0.0.0
