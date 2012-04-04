@@ -31,7 +31,7 @@ public class Provisioner implements BundleListener {
 
 	@Activate
 	public void start(BundleContext context, Map<String, Object> props) throws Exception {
-		configuration = Configurable.createConfigurable(ProvisionerConfiguration.class, props);
+		this.configuration = Configurable.createConfigurable(ProvisionerConfiguration.class, props);
 		this.bundleInstaller = new BundleInstaller(context);
 		this.watcher = new DirectoryWatcher(bundleInstaller);
 		this.watcher.setPickupFolder(configuration.pickupFolder());
