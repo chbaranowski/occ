@@ -4,7 +4,8 @@
 	javax.media.j3d; version=0.0.0, \
 	javax.vecmath; version=0.0.0
 	
--runproperties: activate.lazy.bundles=" \
+-runproperties: launch.storage.dir='generated/fw-host',\
+		activate.lazy.bundles=" \
         org.eclipse.ecf.remoteservice,\
         org.eclipse.ecf.osgi.services.distribution"
 
@@ -57,8 +58,7 @@
 	bundle:(symbolicname=org.eclipse.equinox.cm)
 -runee: JavaSE-1.6
 
--runbundles: org.eclipselabs.occ.marsrobot.remote.host;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.remote.host.jar;version=latest,\
-	osgi.enterprise;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/osgi.enterprise/osgi.enterprise-4.2.0.jar;version='[4.2.0,4.2.1)',\
+-runbundles: osgi.enterprise;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/osgi.enterprise/osgi.enterprise-4.2.0.jar;version='[4.2.0,4.2.1)',\
 	org.apache.felix.http.jetty;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/org.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.0.jar;version='[2.2.0,2.2.1)',\
 	org.apache.felix.metatype;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/org.apache.felix.metatype/org.apache.felix.metatype-1.0.4.jar;version='[1.0.4,1.0.5)',\
 	org.eclipse.equinox.registry;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/org.eclipse.equinox.registry/org.eclipse.equinox.registry-3.5.101.jar;version='[3.5.101,3.5.102)',\
@@ -98,4 +98,6 @@
 	org.eclipselabs.occ.marsrobot.arch;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.arch.jar;version=latest,\
 	org.eclipselabs.occ.marsrobot.webcontrol;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.webcontrol.jar;version=latest,\
 	org.eclipse.osgi.services;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/org.eclipse.osgi.services/org.eclipse.osgi.services-3.3.0.jar;version='[3.3.0,3.3.1)',\
-	org.eclipse.ecf.sharedobject;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar;version='[2.2.100,2.2.101)'
+	org.eclipse.ecf.sharedobject;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/cnf/repo/org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar;version='[2.2.100,2.2.101)',\
+	org.eclipselabs.occ.marsrobot.remote.host;resolution=file:/data/p/OSGi-Tutorial/dev/wsp-repo/occ/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.remote.host.jar;version=latest
+	

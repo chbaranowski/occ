@@ -27,7 +27,8 @@
 	org.apache.felix.gogo.runtime,\
 	org.apache.felix.gogo.command
 
- -runproperties: activate.lazy.bundles=" \
+-runproperties: launch.storage.dir='generated/fw-remote',\
+		activate.lazy.bundles=" \
         org.eclipse.ecf.provider.jmdns, \
         org.eclipse.ecf.provider,\
         org.eclipse.ecf.remoteservice,\
