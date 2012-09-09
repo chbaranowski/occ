@@ -1,8 +1,7 @@
--runvm: -Dnet.mdns.interface=localhost -Dosgi.console
--runfw: org.eclipse.osgi
+-runvm: -Dnet.mdns.interface=192.168.178.27 -Dosgi.console
+-runfw: org.eclipse.osgi;version='[3.8.0.v20120312-2035,3.8.0.v20120312-2035]'
 -runee: JavaSE-1.6
--runbundles: \
-	org.eclipse.osgi.services,\
+-runbundles: org.eclipse.osgi.services,\
 	org.eclipse.osgi.services.remoteserviceadmin,\
 	org.eclipse.equinox.registry,\
 	org.eclipse.equinox.ds,\
@@ -22,4 +21,14 @@
 	org.eclipse.ecf.osgi.services.distribution,\
 	org.eclipse.ecf.provider.remoteservice,\
 	org.eclipselabs.occ.marsrobot.remote.api,\
-	org.eclipselabs.occ.marsrobot.remote.consumer
+	org.eclipselabs.occ.marsrobot.remote.consumer,\
+	utils.startLazyBundles,\
+	org.apache.felix.gogo.shell,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.command
+
+ -runproperties: activate.lazy.bundles=" \
+        org.eclipse.ecf.provider.jmdns, \
+        org.eclipse.ecf.provider,\
+        org.eclipse.ecf.remoteservice,\
+        org.eclipse.ecf.osgi.services.distribution"

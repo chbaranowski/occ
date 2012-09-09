@@ -1,7 +1,15 @@
--runvm: -Dnet.mdns.interface=localhost
+-runvm: -Dnet.mdns.interface=192.168.178.27 -Dosgi.console
+
 -runsystempackages com.sun.j3d.utils.geometry; version=0.0.0, \
 	javax.media.j3d; version=0.0.0, \
 	javax.vecmath; version=0.0.0
+	
+-runproperties: activate.lazy.bundles=" \
+        org.eclipse.ecf.provider.jmdns, \
+        org.eclipse.ecf.provider,\
+        org.eclipse.ecf.remoteservice,\
+        org.eclipse.ecf.osgi.services.distribution"
+
 -runfw: org.eclipse.osgi;version='[3.7.1.R37x_v20110808-1106,3.7.1.R37x_v20110808-1106]'
 -runrequire: bundle:(symbolicname=org.eclipse.equinox.ds),\
 	bundle:(symbolicname=org.eclipse.ecf.discovery),\
@@ -33,46 +41,63 @@
 	bundle:(&(symbolicname=org.eclipse.ecf.identity)(version>=3.1.200.v20111230-0120)),\
 	bundle:(&(symbolicname=org.eclipse.ecf.osgi.services.distribution)(version>=2.0.100.v20111230-0120)),\
 	bundle:(&(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin)(version>=2.0.100.v20111230-0120)),\
-	bundle:(&(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy)(version>=1.0.0.v20111230-0120))
+	bundle:(&(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy)(version>=1.0.0.v20111230-0120)),\
+	bundle:(symbolicname=utils.startLazyBundles),\
+	bundle:(symbolicname=org.eclipse.ecf.provider.jmdns),\
+	bundle:(symbolicname=org.eclipse.ecf),\
+	bundle:(symbolicname=org.eclipse.ecf.discovery),\
+	bundle:(symbolicname=org.eclipse.ecf.identity),\
+	bundle:(symbolicname=org.eclipse.ecf.osgi.services.distribution),\
+	bundle:(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin),\
+	bundle:(symbolicname=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy),\
+	bundle:(symbolicname=org.eclipse.ecf.provider),\
+	bundle:(symbolicname=org.eclipse.ecf.provider.jmdns),\
+	bundle:(symbolicname=org.eclipse.ecf.provider.remoteservice),\
+	bundle:(symbolicname=org.eclipse.ecf.remoteservice),\
+	bundle:(symbolicname=org.eclipse.ecf.sharedobject),\
+	bundle:(symbolicname=org.eclipse.equinox.cm)
 -runee: JavaSE-1.6
--runbundles: org.eclipse.equinox.registry;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.equinox.registry/org.eclipse.equinox.registry-3.5.101.jar;version='[3.5.101,3.5.102)',\
-	org.eclipselabs.occ.marsrobot.provisioning;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.provisioning/org.eclipselabs.occ.marsrobot.provisioning-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipse.ecf.sharedobject;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar;version='[2.2.100,2.2.101)',\
-	org.eclipse.equinox.concurrent;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.equinox.concurrent/org.eclipse.equinox.concurrent-1.0.200.jar;version='[1.0.200,1.0.201)',\
-	org.eclipselabs.occ.marsrobot.remote.api;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.remote.api/org.eclipselabs.occ.marsrobot.remote.api-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipse.ecf.osgi.services.remoteserviceadmin;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.osgi.services.remoteserviceadmin/org.eclipse.ecf.osgi.services.remoteserviceadmin-2.0.100.jar;version='[2.0.100,2.0.101)',\
-	org.eclipse.ecf.provider;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.provider/org.eclipse.ecf.provider-4.2.100.jar;version='[4.2.100,4.2.101)',\
-	org.eclipse.equinox.common;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.equinox.common/org.eclipse.equinox.common-3.6.0.jar;version='[3.6.0,3.6.1)',\
-	org.eclipselabs.occ.marsrobot.arch;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.arch/org.eclipselabs.occ.marsrobot.arch-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.apache.felix.metatype;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.apache.felix.metatype/org.apache.felix.metatype-1.0.4.jar;version='[1.0.4,1.0.5)',\
-	org.eclipselabs.occ.marsrobot.webcontrol;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.webcontrol/org.eclipselabs.occ.marsrobot.webcontrol-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.apache.felix.configadmin;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.apache.felix.configadmin/org.apache.felix.configadmin-1.2.8.jar;version='[1.2.8,1.2.9)',\
-	org.eclipselabs.occ.marsrobot.extender;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.extender/org.eclipselabs.occ.marsrobot.extender-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipse.ecf;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf/org.eclipse.ecf-3.1.300.jar;version='[3.1.300,3.1.301)',\
-	org.eclipselabs.occ.marsrobot.wall;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.wall/org.eclipselabs.occ.marsrobot.wall-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	com.vaadin;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/com.vaadin/com.vaadin-6.7.4.jar;version='[6.7.4,6.7.5)',\
-	org.eclipse.equinox.ds;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.equinox.ds/org.eclipse.equinox.ds-1.3.1.jar;version='[1.3.1,1.3.2)',\
-	org.eclipselabs.occ.marsrobot.robot;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.robot/org.eclipselabs.occ.marsrobot.robot-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipselabs.occ.marsrobot.commands;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.commands/org.eclipselabs.occ.marsrobot.commands-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipse.equinox.util;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.equinox.util/org.eclipse.equinox.util-1.0.300.jar;version='[1.0.300,1.0.301)',\
-	org.apache.felix.http.jetty;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.0.jar;version='[2.2.0,2.2.1)',\
-	org.eclipselabs.occ.marsrobot.api;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.api/org.eclipselabs.occ.marsrobot.api-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.apache.felix.webconsole;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.apache.felix.webconsole/org.apache.felix.webconsole-3.1.8.jar;version='[3.1.8,3.1.9)',\
-	org.eclipselabs.occ.marsrobot.world;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.world/org.eclipselabs.occ.marsrobot.world-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipselabs.occ.marsrobot.box;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.box/org.eclipselabs.occ.marsrobot.box-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipselabs.occ.marsrobot.desktop;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.desktop/org.eclipselabs.occ.marsrobot.desktop-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipse.osgi.services;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.osgi.services/org.eclipse.osgi.services-3.3.0.jar;version='[3.3.0,3.3.1)',\
-	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy-1.0.0.jar;version='[1.0.0,1.0.1)',\
-	org.eclipse.ecf.remoteservice;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.remoteservice/org.eclipse.ecf.remoteservice-6.0.200.jar;version='[6.0.200,6.0.201)',\
-	org.eclipse.core.jobs;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.core.jobs/org.eclipse.core.jobs-3.5.100.jar;version='[3.5.100,3.5.101)',\
-	osgi.cmpn;resolution=http://bundles.bndtools.org.s3.amazonaws.com/osgi.cmpn/osgi.cmpn-4.2.1.jar;version='[4.2.1,4.2.2)',\
-	org.eclipse.ecf.identity;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.identity/org.eclipse.ecf.identity-3.1.200.jar;version='[3.1.200,3.1.201)',\
-	org.eclipselabs.occ.marsrobot.remote.host;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.remote.host/org.eclipselabs.occ.marsrobot.remote.host-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipse.ecf.discovery;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.discovery/org.eclipse.ecf.discovery-4.0.0.jar;version='[4.0.0,4.0.1)',\
-	org.eclipselabs.occ.simbad;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.simbad/org.eclipselabs.occ.simbad-1.4.1.jar;version='[1.4.1,1.4.2)',\
-	org.eclipselabs.occ.marsrobot.sensordevices;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.sensordevices/org.eclipselabs.occ.marsrobot.sensordevices-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.eclipselabs.occ.marsrobot.agentfollower;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/releaserepo/org.eclipselabs.occ.marsrobot.agentfollower/org.eclipselabs.occ.marsrobot.agentfollower-1.0.1.jar;version='[1.0.1,1.0.2)',\
-	org.apache.felix.eventadmin;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.apache.felix.eventadmin/org.apache.felix.eventadmin-1.2.14.jar;version='[1.2.14,1.2.15)',\
-	org.eclipse.ecf.osgi.services.distribution;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.osgi.services.distribution/org.eclipse.ecf.osgi.services.distribution-2.0.100.jar;version='[2.0.100,2.0.101)',\
-	org.eclipse.ecf.provider.remoteservice;resolution=file:/Users/developer/Develop/workspace-marsrobot/cnf/repo/org.eclipse.ecf.provider.remoteservice/org.eclipse.ecf.provider.remoteservice-4.0.0.jar;version='[4.0.0,4.0.1)'
--runproperties: osgi.console=true
+
+-runbundles: org.eclipse.equinox.registry;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.equinox.registry/org.eclipse.equinox.registry-3.5.101.jar;version='[3.5.101,3.5.102)',\
+	utils.startLazyBundles;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/utils.startLazyBundles/utils.startLazyBundles-1.0.0.jar;version='[1.0.0,1.0.1)',\
+	org.eclipselabs.occ.marsrobot.provisioning;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.provisioning.jar;version=latest,\
+	org.eclipse.equinox.ds;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.equinox.ds/org.eclipse.equinox.ds-1.4.0.jar;version='[1.4.0,1.4.1)',\
+	org.eclipse.ecf.sharedobject;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.sharedobject/org.eclipse.ecf.sharedobject-2.2.100.jar;version='[2.2.100,2.2.101)',\
+	org.eclipse.osgi.services;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.osgi.services/org.eclipse.osgi.services-3.3.0.jar;version='[3.3.0,3.3.1)',\
+	org.eclipse.equinox.concurrent;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.equinox.concurrent/org.eclipse.equinox.concurrent-1.0.200.jar;version='[1.0.200,1.0.201)',\
+	org.eclipselabs.occ.marsrobot.remote.api;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.remote.api.jar;version=latest,\
+	org.eclipse.ecf.osgi.services.remoteserviceadmin;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.osgi.services.remoteserviceadmin/org.eclipse.ecf.osgi.services.remoteserviceadmin-2.0.100.jar;version='[2.0.100,2.0.101)',\
+	org.eclipse.ecf.provider;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.provider/org.eclipse.ecf.provider-4.2.100.jar;version='[4.2.100,4.2.101)',\
+	org.eclipselabs.occ.marsrobot.arch;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.arch.jar;version=latest,\
+	org.apache.felix.metatype;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.apache.felix.metatype/org.apache.felix.metatype-1.0.4.jar;version='[1.0.4,1.0.5)',\
+	org.eclipselabs.occ.marsrobot.webcontrol;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.webcontrol.jar;version=latest,\
+	org.apache.felix.configadmin;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.apache.felix.configadmin/org.apache.felix.configadmin-1.2.8.jar;version='[1.2.8,1.2.9)',\
+	org.eclipse.equinox.cm;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.equinox.cm/org.eclipse.equinox.cm-1.0.300.jar;version='[1.0.300,1.0.301)',\
+	org.eclipselabs.occ.marsrobot.extender;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.extender.jar;version=latest,\
+	org.eclipse.ecf;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf/org.eclipse.ecf-3.1.300.jar;version='[3.1.300,3.1.301)',\
+	org.eclipselabs.occ.marsrobot.wall;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.wall.jar;version=latest,\
+	com.vaadin;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/com.vaadin/com.vaadin-6.7.4.jar;version='[6.7.4,6.7.5)',\
+	org.eclipselabs.occ.marsrobot.robot;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.robot.jar;version=latest,\
+	org.eclipselabs.occ.marsrobot.commands;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.commands.jar;version=latest,\
+	org.eclipse.equinox.util;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.equinox.util/org.eclipse.equinox.util-1.0.300.jar;version='[1.0.300,1.0.301)',\
+	org.eclipse.ecf.provider.jmdns;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.provider.jmdns/org.eclipse.ecf.provider.jmdns-4.1.0.jar;version='[4.1.0,4.1.1)',\
+	org.apache.felix.http.jetty;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.0.jar;version='[2.2.0,2.2.1)',\
+	org.eclipselabs.occ.marsrobot.api;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.api.jar;version=latest,\
+	org.apache.felix.webconsole;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.apache.felix.webconsole/org.apache.felix.webconsole-3.1.8.jar;version='[3.1.8,3.1.9)',\
+	org.eclipselabs.occ.marsrobot.world;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.world.jar;version=latest,\
+	org.eclipselabs.occ.marsrobot.box;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.box.jar;version=latest,\
+	org.eclipselabs.occ.marsrobot.desktop;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.desktop.jar;version=latest,\
+	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy/org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy-1.0.0.jar;version='[1.0.0,1.0.1)',\
+	org.eclipse.ecf.remoteservice;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.remoteservice/org.eclipse.ecf.remoteservice-6.0.200.jar;version='[6.0.200,6.0.201)',\
+	osgi.enterprise;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/osgi.enterprise/osgi.enterprise-4.2.0.jar;version='[4.2.0,4.2.1)',\
+	org.eclipse.core.jobs;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.core.jobs/org.eclipse.core.jobs-3.5.100.jar;version='[3.5.100,3.5.101)',\
+	org.eclipse.ecf.identity;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.identity/org.eclipse.ecf.identity-3.1.200.jar;version='[3.1.200,3.1.201)',\
+	org.eclipselabs.occ.marsrobot.remote.host;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.remote.host.jar;version=latest,\
+	org.eclipse.ecf.discovery;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.discovery/org.eclipse.ecf.discovery-4.0.0.jar;version='[4.0.0,4.0.1)',\
+	org.eclipselabs.occ.simbad;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.simbad/generated/org.eclipselabs.occ.simbad.jar;version=latest,\
+	org.eclipselabs.occ.marsrobot.sensordevices;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.sensordevices.jar;version=latest,\
+	org.eclipselabs.occ.marsrobot.agentfollower;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/org.eclipselabs.occ.marsrobot/generated/org.eclipselabs.occ.marsrobot.agentfollower.jar;version=latest,\
+	org.apache.felix.eventadmin;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.apache.felix.eventadmin/org.apache.felix.eventadmin-1.2.14.jar;version='[1.2.14,1.2.15)',\
+	org.eclipse.equinox.common;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.equinox.common/org.eclipse.equinox.common-3.6.100.jar;version='[3.6.100,3.6.101)',\
+	org.eclipse.ecf.osgi.services.distribution;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.osgi.services.distribution/org.eclipse.ecf.osgi.services.distribution-2.0.100.jar;version='[2.0.100,2.0.101)',\
+	org.eclipse.ecf.provider.remoteservice;resolution=file:/Users/developer/Develop/workspace-bndtools-mars/single-project-layout/cnf/repo/org.eclipse.ecf.provider.remoteservice/org.eclipse.ecf.provider.remoteservice-4.0.0.jar;version='[4.0.0,4.0.1)'
