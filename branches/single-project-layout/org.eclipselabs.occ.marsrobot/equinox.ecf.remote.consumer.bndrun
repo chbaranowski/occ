@@ -1,4 +1,4 @@
--runvm: -Dnet.mdns.interface=192.168.178.27 -Dosgi.console
+-runvm: -Dnet.mdns.interface=127.0.0.1 -Dosgi.console
 -runfw: org.eclipse.osgi;version='[3.8.0.v20120312-2035,3.8.0.v20120312-2035]'
 -runee: JavaSE-1.6
 -runbundles: org.eclipse.osgi.services,\
