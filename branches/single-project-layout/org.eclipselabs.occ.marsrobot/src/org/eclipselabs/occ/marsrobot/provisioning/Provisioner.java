@@ -10,14 +10,11 @@ import org.osgi.framework.BundleListener;
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
-import aQute.bnd.annotation.metatype.Configurable;
 
-interface ProvisionerConfiguration {
-	String pickupFolder();
-}
-
-@Component(immediate=true, designate=ProvisionerConfiguration.class)
+@Component(immediate=true)
 public class Provisioner implements BundleListener {
+
+	private static final String PICKUP_DIRECTORY = "provisioning.pickup.directory";
 
 	private Thread thread = null;
 
@@ -27,18 +24,18 @@ public class Provisioner implements BundleListener {
 
 	private Logger logger = Logger.getLogger();
 	
-	ProvisionerConfiguration configuration;
-
 	@Activate
 	public void start(BundleContext context, Map<String, Object> props) throws Exception {
-		this.configuration = Configurable.createConfigurable(ProvisionerConfiguration.class, props);
-		this.bundleInstaller = new BundleInstaller(context);
-		this.watcher = new DirectoryWatcher(bundleInstaller);
-		this.watcher.setPickupFolder(configuration.pickupFolder());
-		thread = new Thread(watcher);
-		thread.start();
-		context.addBundleListener(this);
-		logger.logDebug("Start Provisioning Bundle");
+		String pickupFolder = context.getProperty(PICKUP_DIRECTORY);
+		if(pickupFolder != null) {
+			this.bundleInstaller = new BundleInstaller(context);
+			this.watcher = new DirectoryWatcher(bundleInstaller);
+			this.watcher.setPickupFolder(pickupFolder);
+			thread = new Thread(watcher);
+			thread.start();
+			context.addBundleListener(this);
+			logger.logDebug("Start Provisioning Bundle");
+		}
 	}
 
 	@Deactivate
