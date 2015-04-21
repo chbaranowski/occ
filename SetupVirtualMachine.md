@@ -1,0 +1,18 @@
+# Setup Virtual Machine #
+
+  1. Install VirtualBox
+> > e.g. from http://www.virtualbox.org/wiki/Downloads. We use the latest version of VirtualBox 4.1.x.
+  1. Copy the virtual disk
+> > We provide a virtual disk (named `OCC2011.vdi`) on a USB stick (about 8 GB size) as base to setup your own VM. Copy it to your local disk for performance reasons.
+  1. Create your Virtual Machine in VirtualBox
+    * New Virtual Machine
+    * Name it, e.g. `OCC2011`, Operating System is Linux, Version is Ubuntu (32 bit)
+    * Use defaults for memory (512 MB)
+    * Use existing harddisk, boot from harddisk. Select your copied VirtualDisk file (e.g. `OCC2011.vdi`)
+  1. Start your Virtual Machine
+> > Note: the default user is named "osgi" with standard password "osgi".
+  1. Customize your Virtual Machine if required
+> > E.g. when running the VM within an company intranet, you have to specify an Network proxy in Linux.
+> > Goto System -> Preferences -> Network Proxy ->
+  1. Start Eclipse from Desktop
+> > Note: the SVN is yet included and linked to http://svn.codespot.com/a/eclipselabs.org/occ/trunk. The SVN user is `occparticipant@t-online.de`, the password will be given at OSGi Code Camp. The password is preset, and will be read from local secure store (use "osgi" as password to get access to store).
